@@ -1,19 +1,19 @@
 {
   "name": "Barjas Level 1",
   "short_name": "Barjas 2025",
-  "start_url": "/pelatihan/",
+  "start_url": "/barjas/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0d6efd",
   "description": "Uji pemahaman Anda tentang Pengadaan Barang dan Jasa Pemerintah",
   "icons": [
     {
-      "src": "assets/icons/icon-192x192.png",
+      "src": "/barjas/assets/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-512x512.png",
+      "src": "/barjas/assets/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
