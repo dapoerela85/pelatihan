@@ -7693,6 +7693,11 @@ function handleUrlParameters() {
     document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.NOT_FOUND_CONTAINER).style.display = 'none';
     document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.HELP_CONTAINER).style.display = 'none';
     
+    if (view === 'help') {
+        showHelpPage();
+        return;
+    }
+    
     // If no parameters, show main page
     if (!id && !soal && !view) {
         showMainPage();
