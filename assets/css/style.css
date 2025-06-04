@@ -1,0 +1,357 @@
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #dbeafe, #fef9c3);
+    }      
+
+/* Quiz List Styling */
+#quizList {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-item, .quiz-link {
+    display: block;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.quiz-link {
+    border: 1px solid #dee2e6;
+    background-color: white;
+}
+
+.quiz-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #0d6efd;
+}
+
+.disabled-quiz {
+    background-color: #f8f9fa;
+    border: 1px dashed #dee2e6;
+    opacity: 0.8;
+}
+
+.quiz-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.quiz-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.quiz-unavailable-badge {
+    padding: 0.25rem 0.5rem;
+    background-color: #f8d7da;
+    color: #842029;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.quiz-result-info {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+}
+
+.quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-question-count, .quiz-duration {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+}
+
+.quiz-arrow {
+    color: #0d6efd;
+    font-size: 1.25rem;
+}
+
+.quiz-lock {
+    color: #6c757d;
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .quiz-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .quiz-title {
+        font-size: 1rem;
+    }
+}
+
+.disabled-quiz {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+.container {
+      max-width: 800px;
+      margin: 2rem auto;
+}
+    .landing-page {
+      max-width: 800px;
+      margin: 1rem auto;
+      padding: 1.8rem;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .landing-page h1 {
+      color: #0d6efd;
+      margin-bottom: 1.5rem;
+    }
+    .landing-page p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .toast {
+      z-index: 1080;
+    }
+    .question-number {
+      width: 40px;
+      height: 40px;
+    }
+    .question-number-info {
+      width: 20px;
+      height: 20px;
+    }
+    .option-btn {
+      text-align: left;
+      transition: all 0.3s;
+    }
+    #quizProgress {
+      height: 20px;
+    }
+    .tooltip .tooltip-inner {
+      font-size: 0.75rem;
+    }
+    .result-container {
+      display: none;
+    }
+    .quiz-content {
+      transition: all 0.3s ease;
+    }
+    .hidden {
+      display: none !important;
+    }
+    
+    #selesaiAlert, #timeEndAlert, #giveUpAlert {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    #selesaiAlert, #timeEndAlert, #giveUpAlert h1 {
+      color: #0d6efd;
+      margin-bottom: 1.5rem;
+    }
+    
+    #selesaiAlert, #timeEndAlert, #giveUpAlert p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .start-quiz-btn {
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    
+    /* Alert Styles */
+    .quiz-alert {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+#finishBtn {
+    display: none; /* Hidden by default */
+    transition: all 0.3s;
+}
+/* Tambahkan di bagian style yang sudah ada */
+.question-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.fixed-top {
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Style untuk notifikasi */
+#profile-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1300;
+    min-width: 300px;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.alert {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+
+.btn-close {
+    padding: 0.75rem;
+}
+
+#resultContainer {
+    display: none;
+}
+
+#finishBtn.d-none {
+    display: none;
+}
+#finishBtn {
+    display: inline-block;
+}
+ display: inline-block !important;
+}
+/* Animasi transisi halus */
+#quizContainer {
+    transition: opacity 0.3s ease;
+}
+
+/* Class untuk menghindari flash saat reload */
+.quiz-loading {
+    opacity: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Add to your pelatihan.css */
+.question-image-container {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.question-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#backToResultsBtn {
+    margin-right: 10px;
+}
+
+/* Add this to your pelatihan.css */
+#quizContainer, 
+.landing-page, 
+#resultContainer {
+    display: none;
+}
+
+/* Only show when explicitly enabled */
+#quizContainer:not(.d-none), 
+.landing-page:not(.d-none), 
+#resultContainer:not(.d-none) {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .question-image-container img {
+        max-height: 200px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #user-profile-display, #resultContainer, #resultContainer * {
+        visibility: visible;
+    }
+    #resultContainer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+    .btn {
+        display: none;
+    }
+    #noResultsAlert {
+        display: none !important;
+    }
+}
