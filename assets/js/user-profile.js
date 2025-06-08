@@ -2,7 +2,6 @@
 function isiDataProfil() {
     const profileData = localStorage.getItem('userProfile');
     const modal = new bootstrap.Modal(document.getElementById('profileModal'));
-
     const isEditing = !!profileData;
     const modalTitle = document.getElementById('profileModalLabel');
     modalTitle.textContent = isEditing ? 'Edit Data Profil' : 'Isi Data Profil';
@@ -53,7 +52,7 @@ function hapusProfil() {
     }
 }
 
-// Fungsi tampilkanProfil dengan tambahan tombol hapus
+// Fungsi tampilkan Profil
 function tampilkanProfil() {
     const profileData = localStorage.getItem('userProfile');
     const profileElement = document.getElementById('user-profile-display');
@@ -67,9 +66,10 @@ function tampilkanProfil() {
         profileElement.innerHTML = `
         <li class="nav-item dropdown justify-content-end">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i> <span id="profile-nama" class="text-truncate">${firstName}</span>
+            <i class="bi bi-person-circle"></i> <span id="profile-nama" class="text-truncate">Saya</span>
           </a>
           <ul class="dropdown-menu">
+            <li class="p-2 fw-bold d-none">Salam, ${firstName}</li>
             <li><span id="profile-nama" class="dropdown-item text-truncate">${nama}</span></li>
             <li><span class="dropdown-item text-truncate" id="profile-instansi">${instansi}</span></li>
             <li class="text-center">
@@ -90,7 +90,7 @@ function tampilkanProfil() {
         profileElement.innerHTML = `
         <li class="nav-item dropdown justify-content-end">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i> <span id="profile-nama">Peserta</span>
+            <i class="bi bi-person-circle"></i> <span id="profile-nama" class="">Saya</span>
           </a>
           <ul class="dropdown-menu">
             <li><span class="dropdown-item text-truncate" id="profile-instansi"></span></li>
