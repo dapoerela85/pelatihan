@@ -8304,7 +8304,7 @@ function showQuestion(index) {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'question-image-container mt-3 mb-4 text-center';
         const img = document.createElement('img');
-        img.src = `/assets/images/${currentQuestion.image}`;
+        img.src = `/pelatihan/assets/images/${currentQuestion.image}`;
         img.alt = 'Gambar soal';
         img.className = 'img-fluid rounded border';
         img.style.maxHeight = '300px';
@@ -8853,7 +8853,7 @@ return `
             <p>${ans.question}</p>
             ${question.image ? `
             <div class="question-image-container mt-3 mb-4 text-center">
-                <img src="/assets/images/${question.image}" alt="Gambar soal" class="img-fluid rounded border">
+                <img src="/pelatihan//assets/images/${question.image}" alt="Gambar soal" class="img-fluid rounded border">
             </div>
             ` : ''}
             <ul class="list-group mb-3">${optionsHTML}</ul>
