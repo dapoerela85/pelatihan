@@ -3,6 +3,9 @@
       background: linear-gradient(135deg, #dbeafe, #fef9c3);
     }      
 
+.dropdown-toggle::after {
+ display: none !important;
+}
 /* Quiz List Styling */
 #quizList {
     max-width: 800px;
@@ -213,13 +216,117 @@
     padding: 5px;
 }
 
-.fixed-top {
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+/* Navbar styling */
+.navbar.fixed-top {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem); /* Added to prevent overflow */
+}
+
+/* Nav items styling */
+.navbar .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Changed from space-around */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.navbar .nav-item {
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.navbar .nav-link {
+  color: #333;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 44px; /* Minimum touch target size */
+}
+
+.navbar .nav-link:hover {
+  color: #0d6efd;
+}
+
+.navbar .nav-link i {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.navbar .nav-link .nav-text #profile-nama {
+  font-size: 0.65rem; /* Smaller text */
+
+}
+
+#activeQuizzesBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.6rem;
+  padding: 0.15em 0.3em;
+  transform: translate(25%, -25%);
+}
+
+/* User profile display */
+.userProfileDisplay {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive behavior */
+@media (max-width: 400px) {
+  .navbar.fixed-top {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .navbar .nav-link {
+    padding: 0.5rem 0.25rem;
+    min-width: 36px; /* Smaller touch target for very small screens */
+  }
+  
+  .navbar .nav-link i {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar .nav-link {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar .nav-link .nav-text {
+    display: inline;
+    font-size: 0.75rem;
+  }
+  
+  .navbar .nav-link i {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .nav-link {
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 /* Style untuk notifikasi */
