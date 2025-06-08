@@ -9845,69 +9845,94 @@ function showNotificationsPage() {
 }
 
 function displayActiveQuizzes() {
-  const activeQuizzesList = document.getElementById('activeQuizzesList');
-  const activeSessions = getAllActiveSessions();
-  document.title = "Notifikasi";
-
+  const activeQuizzesList = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_TEXT.ACTIVE_QUIZZESS_LIST);
   if (!activeQuizzesList) return;
-  
-  if (activeSessions.length === 0) {
+
+  // Show loading state initially
+  activeQuizzesList.innerHTML = `
+    <div class="text-center py-4">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-2">Memuat quiz aktif...</p>
+    </div>
+  `;
+
+  try {
+    const activeSessions = getAllActiveSessions();
+    document.title = "Notifikasi";
+
+    if (activeSessions.length === 0) {
+      activeQuizzesList.innerHTML = `
+        <div class="alert alert-info">
+          <i class="bi bi-info-circle"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.NO_NOTIFICATION}
+        </div>
+      `;
+      return;
+    }
+
+    // Add info about number of active quizzes
+    const activeCount = activeSessions.length;
+    const infoText = `Anda memiliki ${activeCount} kuis berjalan`;
+    
     activeQuizzesList.innerHTML = `
-      <div class="alert alert-info">
-        <i class="bi bi-info-circle"></i> Tidak ada notifkasi
+      <div class="alert alert-info mb-3">
+        <i class="bi bi-info-circle"></i> ${infoText}
+      </div>
+      ${activeSessions.map(session => `
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">${session.quizTitle}</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>Status:</span>
+              <span class="badge bg-warning text-dark">Dalam Progres</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>Waktu tersisa:</span>
+              <span class="badge bg-danger" id="sessionTimer-${session.quizId}">
+                ${formatTime(session.remainingTime / 1000)}
+              </span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>Soal saat ini:</span>
+              <span class="badge bg-primary">${session.currentQuestion + 1}/${session.config.QUESTION_COUNT}</span>
+            </div>
+            <div class="d-flex gap-2 mt-3">
+              <button class="btn btn-primary btn-sm continue-quiz-btn" 
+                      data-quiz-id="${session.quizId}" 
+                      data-question="${session.currentQuestion + 1}">
+                <i class="bi bi-arrow-return-right"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.LANJUTKAN_KUIS}
+              </button>
+              <button class="btn btn-outline-danger btn-sm abandon-quiz-btn" 
+                      data-quiz-id="${session.quizId}">
+                <i class="bi bi-x-circle"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.BATALKAN_KUIS}
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    `;
+
+    // Start timers for each active session
+    activeSessions.forEach(session => {
+      const timerElement = document.getElementById(`sessionTimer-${session.quizId}`);
+      if (timerElement) {
+        updateQuizTimer(timerElement, session.endTime);
+      }
+    });
+
+    // Setup event listeners for the buttons
+    setupNotificationEventListeners();
+
+  } catch (error) {
+    console.error("Error loading active quizzes:", error);
+    activeQuizzesList.innerHTML = `
+      <div class="alert alert-danger">
+        <i class="bi bi-exclamation-triangle"></i> Gagal memuat daftar ujian aktif
       </div>
     `;
-    return;
   }
-  
-    const activeCount = activeSessions.length;
-  const infoText = `Anda memiliki ${activeCount} kuis berjalan`;
-  
-  activeQuizzesList.innerHTML = activeSessions.map(session => `
-    <div class="card mb-3">
-      <div class="card-body">
-        <h5 class="card-title">${session.quizTitle}</h5>
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span>Status:</span>
-          <span class="badge bg-warning text-dark">Dalam Progres</span>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span>Waktu tersisa:</span>
-          <span class="badge bg-danger" id="sessionTimer-${session.quizId}">
-            ${formatTime(session.remainingTime / 1000)}
-          </span>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span>Soal saat ini:</span>
-          <span class="badge bg-primary">${session.currentQuestion + 1}/${session.config.QUESTION_COUNT}</span>
-        </div>
-        <div class="d-flex gap-2 mt-3">
-          <button class="btn btn-primary btn-sm continue-quiz-btn" 
-                  data-quiz-id="${session.quizId}" 
-                  data-question="${session.currentQuestion + 1}">
-            <i class="bi bi-arrow-return-right"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.LANJUTKAN_KUIS}
-          </button>
-          <button class="btn btn-outline-danger btn-sm abandon-quiz-btn" 
-                  data-quiz-id="${session.quizId}">
-            <i class="bi bi-x-circle"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.BATALKAN_KUIS}
-          </button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-  
-  // Start timers for each active session
-  activeSessions.forEach(session => {
-    const timerElement = document.getElementById(`sessionTimer-${session.quizId}`);
-    if (timerElement) {
-      updateQuizTimer(timerElement, session.endTime);
-    }
-  });
-  
-  // Setup event listeners for the buttons
-  setupNotificationEventListeners();
 }
-
 
 // Initialize
 document.addEventListener('click', function(e) {
