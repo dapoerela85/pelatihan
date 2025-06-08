@@ -1,7 +1,7 @@
 const CACHE_NAME = 'barjas2025'; // Added version number
 const urlsToCache = [
-  '/barjas/',
-  '/barjas/index.html',
+  '/pelatihan/',
+  '/pelatihan/index.html',
   '/assets/css/style.css',
   '/assets/js/user-profile.js',
   'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
@@ -73,7 +73,7 @@ self.addEventListener('fetch', event => {
         ).catch(() => {
           // If fetch fails and this is a document request, return offline page
           if (event.request.mode === 'navigate') {
-            return caches.match('/barjas/');
+            return caches.match('/pelatihan/');
           }
           return new Response('Offline', { status: 503 });
         });
