@@ -8666,20 +8666,7 @@ function loadProgress() {
 }
 
 function finishQuiz(status) {
-    // Hitung jumlah soal yang belum dijawab
-    const unansweredCount = userAnswers.filter(a => a === null || a?.isSkipped).length;
-    const allAnswered = unansweredCount === 0;
-    
-    // Jika semua soal telah dijawab DAN waktu masih tersisa, hentikan timer
-    if (allAnswered && !isTimeExpired()) {
-        clearInterval(countdownInterval);
-        
-        // Simpan waktu yang tersisa sebagai waktu yang digunakan
-        const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
-        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000);
-        storage.set(QUIZ_CONFIG.KEYS.END_TIME, Date.now()); // Set end time to now
-    }
-    // Jika masih ada soal yang belum dijawab, biarkan timer berjalan
+    clearInterval(countdownInterval);
     
     const completeAnswers = questions.map((question, index) => {
         return userAnswers[index] || {
@@ -8698,16 +8685,11 @@ function finishQuiz(status) {
         percentage: calculatePercentageScore(),
         timeTaken: calculateTimeTaken(),
         completedAt: new Date().toISOString(),
-        status: status || 'completed',
-        allAnswered: allAnswered // Tambahkan flag apakah semua soal telah dijawab
+        status: status
     };
     
     storage.set(QUIZ_CONFIG.KEYS.RESULTS, resultData);
-    
-    // Force show results page
-    const params = new URLSearchParams(window.location.search);
-    params.set('view', 'results');
-    window.location.search = params.toString();
+    showResults();
 }
 
 function showResults() {
