@@ -10013,6 +10013,26 @@ window.addEventListener('appinstalled', () => {
     console.log('PWA was installed');
 });
 
+function updateInstallButton() {
+    if (isRunningAsPWA()) {
+        installContainer.style.display = 'block';
+        installBtnText.textContent = 'Open in App';
+        installBtn.classList.remove('installable');
+        installBtn.classList.add('installed');
+        installBtn.onclick = () => {
+            window.location.href = window.location.origin;
+        };
+    } else if (deferredPrompt) {
+        installContainer.style.display = 'block';
+        installBtnText.textContent = 'Install App';
+        installBtn.classList.remove('installed');
+        installBtn.classList.add('installable');
+        installBtn.onclick = installPWA;
+    } else {
+        installContainer.style.display = 'none';
+    }
+}
+
 // Check on page load
 window.addEventListener('load', updateInstallButton);
 // Also check when the page gains focus (in case installed while app was open)
