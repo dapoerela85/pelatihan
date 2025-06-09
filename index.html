@@ -36,17 +36,20 @@
           <span id="activeQuizzesBadge" class="badge bg-danger d-none">0</span>
         </a>
       </li>
-      <li>
-        <button class="btn btn-sm btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-three-dots-vertical"></i></button>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <i class="bi bi-three-dots-vertical"></i>
+          <span class="nav-text">Menu</span>
+        </a>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close shadow-none btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
 <ul class="nav flex-column">
@@ -287,13 +290,6 @@
        <li>Contoh url parameter untuk mendapatkan nomor soal ujian <span class="fw-bold small">index.html?id=299&soal=</span><span class="badge bg-info text-bg-light">1</span> : Nomor <span class="badge bg-info text-bg-light">1</span> adalah nomor soal ujian dan nomor seterusnya (soal=2, soal=3, dst). </li>
        <li>Contoh url parameter melihat hasil <span class="fw-bold small">index.html?id=299&view=results</span> : untuk menampilkan hasil ujian jika sudah menyelesaikan ujian.</li>
        </ul>
-      </div>
-      <div class="mt-4" id="installContainer" style="display: none;">
-        <h4>Install/Buka di Aplikasi</h4>
-        <button id="installBtn" class="nav-link">
-        <i class="bi bi-download"></i>
-        <span class="nav-text" id="installBtnText">Install App</span>
-    </button>
       </div>
       <div class="mt-4">
         <h4>Contact Support</h4>
