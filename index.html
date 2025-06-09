@@ -8676,7 +8676,7 @@ function finishQuiz(status) {
         
         // Save remaining time as time used
         const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
-        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000;
+        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000);
         storage.set(QUIZ_CONFIG.KEYS.END_TIME, Date.now());
     }
     
