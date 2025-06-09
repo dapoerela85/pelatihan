@@ -8844,25 +8844,6 @@ document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.RESULT_SUMMARY).innerHTML
         </div>
     </div>
 
-    const allAnswered = result.allAnswered;
-    
-const timeInfoHTML = `
-    <div class="d-flex justify-content-between align-items-center small text-muted">
-        <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:</span>
-        <span><strong>${formatTime(result.timeTaken)}</strong></span>
-    </div>
-    <div class="d-flex justify-content-between align-items-center small text-muted">
-        <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:</span>
-        <span><strong>${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}</strong></span>
-    </div>
-    ${!isExpired && !result.allAnswered ? `
-    <div class="alert alert-info mt-2 small">
-        <i class="bi bi-info-circle"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.INFO} Masih ada waktu tersisa dan soal yang belum dijawab. 
-        Anda dapat melanjutkan kuis dengan menekan tombol <strong>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.LANJUTKAN_KUIS}</strong>.
-    </div>
-    ` : ''}
-`;
-
     const list = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.ANSWER_LIST);
     list.innerHTML = result.answers.map((ans, index) => {
         const question = questions[index];
