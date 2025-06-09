@@ -51,13 +51,19 @@
   <div class="offcanvas-body">
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/pelatihan/">Beranda</a>
+    <a class="nav-link active" aria-current="page" href="/pelatihan/"><i class="bi bi-house"></i> Beranda</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="?view=help"><i class="bi bi-question-circle"></i> Bantuan</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="?view=settings"><i class="bi bi-gear"></i> Pengaturan</a>
+  </li>
+  <li class="nav-item" id="installContainer" style="display: none;">
+    <button id="installBtn" class="nav-link">
+        <i class="bi bi-download"></i>
+        <span class="nav-text">Install Aplikasi</span>
+    </button>
   </li>
 </ul>
   </div>
@@ -9953,40 +9959,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Handle PWA installation
 let deferredPrompt;
-const installContainer = document.getElementById('installContainer');
-const installBtn = document.getElementById('installBtn');
-const installBtnText = document.getElementById('installBtnText');
 
-// Check if the app is running as a standalone PWA
-function isRunningAsPWA() {
-    return window.matchMedia('(display-mode: standalone)').matches || 
-           window.navigator.standalone ||
-           document.referrer.includes('android-app://');
-}
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    // Stash the event so it can be triggered later
+    deferredPrompt = e;
+    // Show the install button
+    document.getElementById('installContainer').style.display = 'block';
+});
 
-// Update the button based on installation status
-function updateInstallButton() {
-    if (isRunningAsPWA()) {
-        // App is already installed - show "Open in App" button
-        installContainer.style.display = 'block';
-        installBtnText.textContent = 'Open in App';
-        installBtn.onclick = () => {
-            // This will launch the app if already installed
-            window.location.href = window.location.origin;
-        };
-    } else if (deferredPrompt) {
-        // App can be installed - show install button
-        installContainer.style.display = 'block';
-        installBtnText.textContent = 'Install App';
-        installBtn.onclick = installPWA;
-    } else {
-        // Neither installed nor installable - hide button
-        installContainer.style.display = 'none';
-    }
-}
-
-// Install PWA function
-async function installPWA() {
+document.getElementById('installBtn').addEventListener('click', async () => {
     if (!deferredPrompt) return;
     
     // Show the install prompt
@@ -10001,53 +9984,18 @@ async function installPWA() {
     // We've used the prompt, and can't use it again, throw it away
     deferredPrompt = null;
     
-    // Update the button immediately
-    updateInstallButton();
-}
-
-// Listen for beforeinstallprompt event
-window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent the mini-infobar from appearing on mobile
-    e.preventDefault();
-    // Stash the event so it can be triggered later
-    deferredPrompt = e;
-    // Update the install button
-    updateInstallButton();
+    // Hide the install button
+    document.getElementById('installContainer').style.display = 'none';
 });
 
-// Listen for appinstalled event
 window.addEventListener('appinstalled', () => {
+    // Hide the install button
+    document.getElementById('installContainer').style.display = 'none';
     // Clear the deferredPrompt so it can be garbage collected
     deferredPrompt = null;
-    // Update the button to show "Open in App"
-    updateInstallButton();
+    // Optionally, send analytics event to indicate successful install
     console.log('PWA was installed');
 });
-
-function updateInstallButton() {
-    if (isRunningAsPWA()) {
-        installContainer.style.display = 'block';
-        installBtnText.textContent = 'Open in App';
-        installBtn.classList.remove('installable');
-        installBtn.classList.add('installed');
-        installBtn.onclick = () => {
-            window.location.href = window.location.origin;
-        };
-    } else if (deferredPrompt) {
-        installContainer.style.display = 'block';
-        installBtnText.textContent = 'Install App';
-        installBtn.classList.remove('installed');
-        installBtn.classList.add('installable');
-        installBtn.onclick = installPWA;
-    } else {
-        installContainer.style.display = 'none';
-    }
-}
-
-// Check on page load
-window.addEventListener('load', updateInstallButton);
-// Also check when the page gains focus (in case installed while app was open)
-window.addEventListener('focus', updateInstallButton);
 </script>
 </body>
 </html>
