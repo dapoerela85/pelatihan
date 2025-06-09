@@ -8666,7 +8666,20 @@ function loadProgress() {
 }
 
 function finishQuiz(status) {
-    clearInterval(countdownInterval);
+    // Hitung jumlah soal yang belum dijawab
+    const unansweredCount = userAnswers.filter(a => a === null || a?.isSkipped).length;
+    const allAnswered = unansweredCount === 0;
+    
+    // Jika semua soal telah dijawab DAN waktu masih tersisa, hentikan timer
+    if (allAnswered && !isTimeExpired()) {
+        clearInterval(countdownInterval);
+        
+        // Simpan waktu yang tersisa sebagai waktu yang digunakan
+        const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
+        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000);
+        storage.set(QUIZ_CONFIG.KEYS.END_TIME, Date.now()); // Set end time to now
+    }
+    // Jika masih ada soal yang belum dijawab, biarkan timer berjalan
     
     const completeAnswers = questions.map((question, index) => {
         return userAnswers[index] || {
@@ -8685,7 +8698,8 @@ function finishQuiz(status) {
         percentage: calculatePercentageScore(),
         timeTaken: calculateTimeTaken(),
         completedAt: new Date().toISOString(),
-        status: status || 'completed'
+        status: status || 'completed',
+        allAnswered: allAnswered // Tambahkan flag apakah semua soal telah dijawab
     };
     
     storage.set(QUIZ_CONFIG.KEYS.RESULTS, resultData);
@@ -8829,6 +8843,25 @@ document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.RESULT_SUMMARY).innerHTML
             </button>
         </div>
     </div>
+
+        const allAnswered = result.allAnswered;
+    
+    const timeInfoHTML = `
+        <div class="d-flex justify-content-between align-items-center small text-muted">
+            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:</span>
+            <span><strong>${formatTime(result.timeTaken)}</strong></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center small text-muted">
+            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:</span>
+            <span><strong>${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}</strong></span>
+        </div>
+        ${!isExpired && !allAnswered ? `
+        <div class="alert alert-info mt-2 small">
+            <i class="bi bi-info-circle"></i> Masih ada waktu tersisa dan soal yang belum dijawab. 
+            Anda dapat melanjutkan kuis dengan menekan tombol <strong>Edit/Lanjutkan</strong>.
+        </div>
+        ` : ''}
+    `;
 `;
 
     const list = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.ANSWER_LIST);
