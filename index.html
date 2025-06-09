@@ -8844,16 +8844,16 @@ document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.RESULT_SUMMARY).innerHTML
         </div>
     </div>
 
-        const allAnswered = result.allAnswered;
+    const allAnswered = result.allAnswered;
     
     const timeInfoHTML = `
         <div>
-            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:</span>
-            <span><strong>${formatTime(result.timeTaken)}</strong></span>
+            ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:
+            ${formatTime(result.timeTaken)}
         </div>
         <div>
-            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:</span>
-            <span><strong>${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}</strong></span>
+            ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:
+            ${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}
         </div>
         ${!isExpired && !allAnswered ? `
         <div class="alert alert-info mt-2 small">
