@@ -8850,11 +8850,11 @@ document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.RESULT_SUMMARY).innerHTML
     // Tambahkan informasi di tampilan hasil
 const timeInfoHTML = `
     <div class="d-flex justify-content-between align-items-center small text-muted">
-        <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:</span>
+        <span>Waktu yang dihabiskan:</span>
         <span><strong>${formatTime(result.timeTaken)}</strong></span>
     </div>
     <div class="d-flex justify-content-between align-items-center small text-muted">
-        <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:</span>
+        <span>Waktu yang tersisa:</span>
         <span><strong>${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}</strong></span>
     </div>
     ${!isExpired && !allAnswered ? `
