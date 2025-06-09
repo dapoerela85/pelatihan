@@ -8666,21 +8666,8 @@ function loadProgress() {
 }
 
 function finishQuiz(status) {
-    // Count unanswered questions
-    const unansweredCount = userAnswers.filter(a => a === null || a?.isSkipped).length;
-    const allAnswered = unansweredCount === 0;
+    clearInterval(countdownInterval);
     
-    // If all questions answered AND time remains, stop timer
-    if (allAnswered && !isTimeExpired()) {
-        clearInterval(countdownInterval);
-        
-        // Save remaining time as time used
-        const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
-        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000);
-        storage.set(QUIZ_CONFIG.KEYS.END_TIME, Date.now());
-    }
-    
-    // Complete answers array with skipped questions if needed
     const completeAnswers = questions.map((question, index) => {
         return userAnswers[index] || {
             question: question.question,
@@ -8698,16 +8685,11 @@ function finishQuiz(status) {
         percentage: calculatePercentageScore(),
         timeTaken: calculateTimeTaken(),
         completedAt: new Date().toISOString(),
-        status: status || 'completed',
-        allAnswered: allAnswered
+        status: status
     };
     
     storage.set(QUIZ_CONFIG.KEYS.RESULTS, resultData);
-    
-    // Redirect to results page
-    const params = new URLSearchParams(window.location.search);
-    params.set('view', 'results');
-    window.location.search = params.toString();
+    showResults();
 }
 
 function showResults() {
@@ -8967,15 +8949,12 @@ function formatTime(seconds) {
 
 function calculateTimeTaken() {
     const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
-    const endTime = storage.get(QUIZ_CONFIG.KEYS.END_TIME);
-    
     if (!startTime) return 0;
-    
-    const actualEndTime = endTime || Date.now();
-    const elapsedSeconds = Math.floor((actualEndTime - parseInt(startTime)) / 1000;
+    const elapsedSeconds = Math.floor((Date.now() - parseInt(startTime)) / 1000);
     const maxDurationSeconds = QUIZ_CONFIG.DURATION / 1000;
     return Math.min(elapsedSeconds, maxDurationSeconds);
 }
+
 
 function formatDateTime(date) {
     return date.toLocaleString('id-ID', {
