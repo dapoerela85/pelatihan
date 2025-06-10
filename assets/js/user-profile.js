@@ -6,10 +6,13 @@ function isiDataProfil() {
     const modalTitle = document.getElementById('profileModalLabel');
     modalTitle.textContent = isEditing ? 'Edit Data Profil' : 'Isi Data Profil';
 
+    // Reset form validation
+    document.getElementById('profileForm').classList.remove('was-validated');
+    
     if (isEditing) {
         const parsedData = JSON.parse(profileData);
-        document.getElementById('modalNama').value = parsedData.nama;
-        document.getElementById('modalInstansi').value = parsedData.instansi;
+        document.getElementById('modalNama').value = parsedData.nama || '';
+        document.getElementById('modalInstansi').value = parsedData.instansi || '';
     } else {
         document.getElementById('modalNama').value = '';
         document.getElementById('modalInstansi').value = '';
@@ -22,14 +25,16 @@ function isiDataProfil() {
     const newSaveBtn = saveBtn.cloneNode(true);
     saveBtn.parentNode.replaceChild(newSaveBtn, saveBtn);
 
-    newSaveBtn.addEventListener('click', function () {
-        const nama = document.getElementById('modalNama').value.trim();
-        const instansi = document.getElementById('modalInstansi').value.trim();
-
-        if (!nama) {
-            showNotification("Nama tidak boleh kosong!", 'danger');
+    newSaveBtn.addEventListener('click', function() {
+        const form = document.getElementById('profileForm');
+        form.classList.add('was-validated');
+        
+        if (!form.checkValidity()) {
             return;
         }
+
+        const nama = document.getElementById('modalNama').value.trim();
+        const instansi = document.getElementById('modalInstansi').value.trim();
 
         localStorage.setItem('userProfile', JSON.stringify({
             nama,
@@ -45,6 +50,12 @@ function isiDataProfil() {
 
 // Fungsi untuk menghapus profil
 function hapusProfil() {
+    const profileData = localStorage.getItem('userProfile');
+    if (!profileData) {
+        showNotification("Tidak ada profil yang tersimpan", 'info');
+        return;
+    }
+
     if (confirm('Apakah Anda yakin ingin menghapus profil?')) {
         localStorage.removeItem('userProfile');
         showNotification("Profil berhasil dihapus", 'info');
@@ -63,46 +74,78 @@ function tampilkanProfil() {
         const { nama, instansi } = JSON.parse(profileData);
         const firstName = nama.split(' ')[0];
         
+        // Only put the trigger in the nav
         profileElement.innerHTML = `
-        <li class="nav-item dropdown justify-content-end">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i> <span id="profile-nama" class="text-truncate">Saya</span>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#" role="button" data-bs-toggle="modal" data-bs-target="#profileViewModal">
+            <i class="bi bi-person-circle me-2"></i> 
+            <span id="profile-nama" class="text-truncate">Saya</span>
           </a>
-          <ul class="dropdown-menu">
-            <li class="p-2 fw-bold d-none">Salam, ${firstName}</li>
-            <li><span id="profile-nama" class="dropdown-item text-truncate">${nama}</span></li>
-            <li><span class="dropdown-item text-truncate" id="profile-instansi">${instansi}</span></li>
-            <li class="text-center">
-             <hr class="dropdown-divider">
-             <div class="btn-group">
-             <button class="btn btn-sm btn-outline-primary mt-2 btn-edit-profil" onclick="isiDataProfil()">
-              <i class="bi bi-pencil-square"></i> Edit
-             </button>
-             <button class="btn btn-sm btn-outline-danger mt-2" onclick="hapusProfil()">
-              <i class="bi bi-trash"></i> Hapus
-             </button>
-             </div>
-            </li>
-          </ul>
         </li>
         `;
+
+        // Create or update the modal in the body
+        let modal = document.getElementById('profileViewModal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'profileViewModal';
+            modal.className = 'modal fade';
+            modal.setAttribute('tabindex', '-1');
+            modal.setAttribute('aria-labelledby', 'profileViewModalLabel');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(modal);
+        }
+        
+        modal.innerHTML = `
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="profileViewModalLabel">Profil Anda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-center mb-4">
+                  <i class="bi bi-person-circle" style="font-size: 3rem;"></i>
+                  <h4 class="mt-2">${nama}</h4>
+                  <p class="text-muted">${instansi || 'Tidak ada instansi'}</p>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" onclick="isiDataProfil()" data-bs-dismiss="modal">
+                  <i class="bi bi-pencil-square me-2"></i>Edit Profil
+                </button>
+                <button type="button" class="btn btn-outline-danger" onclick="hapusProfil()" data-bs-dismiss="modal">
+                  <i class="bi bi-trash me-2"></i>Hapus Profil
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Initialize the modal if it's a new one
+        if (!modal._modal) {
+            modal._modal = new bootstrap.Modal(modal);
+        }
     } else {
         profileElement.innerHTML = `
-        <li class="nav-item dropdown justify-content-end">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i> <span id="profile-nama" class="">Saya</span>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" role="button" onclick="isiDataProfil()">
+            <i class="bi bi-person-circle me-2"></i> 
+            <span id="profile-nama">Saya</span>
           </a>
-          <ul class="dropdown-menu">
-            <li><span class="dropdown-item text-truncate" id="profile-instansi"></span></li>
-            <li class="text-center">
-             <hr class="dropdown-divider">
-             <button class="btn btn-sm btn-outline-primary btn-edit-profil" onclick="isiDataProfil()">
-              <i class="bi bi-pencil-square"></i> Isi Data Profil
-             </button>
-            </li>
-          </ul>
         </li>
         `;
+        
+        // Remove the modal if it exists when no profile data
+        const modal = document.getElementById('profileViewModal');
+        if (modal) {
+            // Hide the modal first if it's open
+            const bsModal = bootstrap.Modal.getInstance(modal);
+            if (bsModal) {
+                bsModal.hide();
+            }
+            modal.remove();
+        }
     }
 }
 
@@ -117,24 +160,23 @@ function showNotification(message, type = 'success') {
     // Buat elemen notifikasi
     const notification = document.createElement('div');
     notification.id = 'profile-notification';
-    notification.className = `alert alert-${type} alert-dismissible fade show`;
+    notification.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
     notification.setAttribute('role', 'alert');
+    notification.style.zIndex = '1100';
     notification.innerHTML = `
+        <i class="bi ${type === 'success' ? 'bi-check-circle' : type === 'danger' ? 'bi-exclamation-triangle' : 'bi-info-circle'} me-2"></i>
         ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
 
-    // Tambahkan notifikasi ke dalam elemen profile display
-    const profileElement = document.getElementById('user-profile-display');
-    if (profileElement) {
-        profileElement.parentNode.insertBefore(notification, profileElement);
+    // Tambahkan notifikasi ke body
+    document.body.appendChild(notification);
 
-        // Hilangkan notifikasi setelah 3 detik
-        setTimeout(() => {
-            const bootstrapAlert = bootstrap.Alert.getOrCreateInstance(notification);
-            bootstrapAlert.close();
-        }, 3000);
-    }
+    // Hilangkan notifikasi setelah 3 detik
+    setTimeout(() => {
+        const bsAlert = bootstrap.Alert.getOrCreateInstance(notification);
+        bsAlert.close();
+    }, 3000);
 }
 
 // Panggil fungsi tampilkanProfil ketika halaman dimuat
