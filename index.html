@@ -26,6 +26,18 @@
           <span class="nav-text">Beranda</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?view=help">
+          <i class="bi bi-question-circle"></i>
+          <span class="nav-text">Bantuan</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?view=settings">
+          <i class="bi bi-gear"></i>
+          <span class="nav-text">Pengaturan</span>
+        </a>
+      </li>
       <li id="user-profile-display" class="userProfileDisplay">
         <!-- Konten akan diisi oleh JavaScript -->
       </li>
@@ -36,41 +48,9 @@
           <span id="activeQuizzesBadge" class="badge bg-danger d-none">0</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          <i class="bi bi-three-dots-vertical"></i>
-          <span class="nav-text">Menu</span>
-        </a>
-      </li>
     </ul>
   </div>
 </nav>
-
-<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
-    <button type="button" class="btn-close shadow-none btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body fs-4">
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/pelatihan/"><i class="bi bi-house"></i> Beranda</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="?view=help"><i class="bi bi-question-circle"></i> Bantuan</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="?view=settings"><i class="bi bi-gear"></i> Pengaturan</a>
-  </li>
-  <li class="nav-item" id="installContainer" style="display: none;">
-    <button id="installBtn" class="nav-link">
-        <i class="bi bi-download"></i>
-        <span class="nav-text">Install Aplikasi</span>
-    </button>
-  </li>
-</ul>
-  </div>
-</div>
 
  <div class="container py-2" id="mainContainer">
 
@@ -124,7 +104,7 @@
           <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
-          <p class="mt-2">Memuat ujian aktif...</p>
+          <p class="mt-2">Memuat quiz aktif...</p>
         </div>
       </div>
     </div>
@@ -283,15 +263,6 @@
         </table>
 
       <div class="mt-4">
-       <h4>Memahami URL/Link Parameter</h4>
-       <ul>
-       <li>Url Beranda/Halaman depan : <span class="badge bg-info text-bg-light">index.html</span> untuk menampilkan semua ujian dengan pilihan level/versi. </li>
-       <li>Contoh url parameter untuk menampilkan halaman ujian (contoh ujian Try Out Pelatihan Kompetensi FBJ Level 1 Tingkat Dasar, id 299) : <span class="fw-bold small">index.html?id=</span><span class="badge bg-info text-bg-light">299</span> : Nomor <span class="badge bg-info text-bg-light">299</span> adalah nomor kode/ID unik ujian. Setiap ujian level/versi memiliki ID unik. </li>
-       <li>Contoh url parameter untuk mendapatkan nomor soal ujian <span class="fw-bold small">index.html?id=299&soal=</span><span class="badge bg-info text-bg-light">1</span> : Nomor <span class="badge bg-info text-bg-light">1</span> adalah nomor soal ujian dan nomor seterusnya (soal=2, soal=3, dst). </li>
-       <li>Contoh url parameter melihat hasil <span class="fw-bold small">index.html?id=299&view=results</span> : untuk menampilkan hasil ujian jika sudah menyelesaikan ujian.</li>
-       </ul>
-      </div>
-      <div class="mt-4">
         <h4>Contact Support</h4>
         <p>Ada pertanyaan? atau web error? jangan sungkan hubungi kami.</p>
         <p>Email: saadahemail@gmail.com<br>Whatsapp: 0817-7997-7947</p>
@@ -357,6 +328,7 @@
         </div>
     </div>
 </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/pelatihan/assets/js/user-profile.js"></script>
   <script src="/pelatihan/assets/js/sw.js"></script>
@@ -407,9 +379,7 @@ const COMMON_QUIZ_CONFIG = {
     UNIVERSAL_MODAL_BODY: "universalModalBody",
     UNIVERSAL_MODAL_CONFIRM_BUTTON: "universalModalConfirmBtn",
     SETTINGS_CONTAINER: "settingsContainer",
-    NOTIFICATIONS_CONTAINER: "notificationsContainer",
-    ACTIVE_QUIZZESS_LIST: "activeQuizzesList",
-    NO_NOTIFICATION: "Tidak ada notifkasi"
+    NOTIFICATIONS_CONTAINER: "notificationsContainer"
   },
 
   ELEMENT_TEXT: {
@@ -445,7 +415,9 @@ const COMMON_QUIZ_CONFIG = {
     POIN: "Poin",
     SOAL: "Soal",
     LANJUTKAN_KUIS: "Lanjutkan",
-    BATALKAN_KUIS: "Batalkan"
+    BATALKAN_KUIS: "Batalkan",
+    ACTIVE_QUIZZESS_LIST: "activeQuizzesList",
+    NO_NOTIFICATION: "Tidak ada notifkasi"
   }
 };
 
@@ -740,6 +712,7 @@ const QUIZ_CONFIGS = {
 
 // Questions
 const QUIZ_QUESTIONS = {
+  // tingkat dasar 90 soal
   '299': [
     {
       question: "Agen pengadaan adalah UKPBJ atau Pelaku Usaha yang melaksanakan sebagian atau seluruh pekerjaan Pengadaan Barang/Jasa yang diberi kepercayaan oleh Kementerian/Lembaga/Perangkat Daerah sebagai pihak pemberi pekerjaan.",
@@ -1597,6 +1570,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
+  // 3.0 80 soal
   '300': [
     {
       question: "",
@@ -2411,7 +2385,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // soal versi 3.0 paket b
+  // 3.0 paket b - 80 soal
   '302': [
     {
       question: "Di bawah ini merupakan urutan tahapan Siklus Manajemen Rantai Pasok yang benar yaitu…<br> 1. Plan; <br> 2. Monitoring; <br> 3. Source; <br> 4. Mitigasi; <br> 5. Make; <br> 6. Deliver.",
@@ -3216,7 +3190,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // soal level 1 versi 3.1.0
+  // 3.1.0 80 soal
   '310': [
     {
       question: "Salah satu tahapan perencanaan Pengadaan Barang/Jasa Pemerintah adalah identifikasi kebutuhan. Proses tersebut merupakan gambaran aktivitas dalam segmen rantai pasok....",
@@ -4028,7 +4002,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // level 1 versi 3.1.1
+  // 3.1.1 
   '311': [
     {
       question: "Badan Perhubungan Provinsi ABC mengadakan meja kerja staf sebanyak 10 (sepuluh) unit sebesar Rp 46.000.000,00. dengan bentuk kontrak adalah kuitansi. Nama pembeli yang akan dicatat dalam kuitansi yaitu...",
@@ -4832,7 +4806,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // level 1 versi 3.1.2 100 soal
+  // 3.1.2 100 soal
   '312': [
     {
       question: "Pencarian pemasok yang dilakukan oleh suatu organisasi korporasi maupun institusi merupakan segmen/komponen rantai pasok pada...",
@@ -5837,7 +5811,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // level 1 soal 100
+  // 100 soal non-lkpp
   '313': [
     {
       question: "Pokja Pemilihan kota A sedang melaksanakan pemilihan gedung rumah sakit dengan nilai HPS Rp. 20 miliar. Proses evaluasi sudah tahap usulan penetapan pemenang. Siapa yang berwenang menetapkan pemenang tersebut ?",
@@ -6847,7 +6821,7 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // soal 100 tangsel 5
+  // 100 soal tangsel 5
   '314': [
     {
       question: "Pekerjaan yang dapat dilakukakan melalui swakelola oleh Kementerian Koperasi dan Usaha Kecil dan Menengah adalah...",
@@ -8666,7 +8640,20 @@ function loadProgress() {
 }
 
 function finishQuiz(status) {
-    clearInterval(countdownInterval);
+    // Hitung jumlah soal yang belum dijawab
+    const unansweredCount = userAnswers.filter(a => a === null || a?.isSkipped).length;
+    const allAnswered = unansweredCount === 0;
+    
+    // Jika semua soal telah dijawab DAN waktu masih tersisa, hentikan timer
+    if (allAnswered && !isTimeExpired()) {
+        clearInterval(countdownInterval);
+        
+        // Simpan waktu yang tersisa sebagai waktu yang digunakan
+        const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
+        const timeTaken = Math.floor((Date.now() - parseInt(startTime)) / 1000);
+        storage.set(QUIZ_CONFIG.KEYS.END_TIME, Date.now()); // Set end time to now
+    }
+    // Jika masih ada soal yang belum dijawab, biarkan timer berjalan
     
     const completeAnswers = questions.map((question, index) => {
         return userAnswers[index] || {
@@ -8685,11 +8672,16 @@ function finishQuiz(status) {
         percentage: calculatePercentageScore(),
         timeTaken: calculateTimeTaken(),
         completedAt: new Date().toISOString(),
-        status: status
+        status: status || 'completed',
+        allAnswered: allAnswered // Tambahkan flag apakah semua soal telah dijawab
     };
     
     storage.set(QUIZ_CONFIG.KEYS.RESULTS, resultData);
-    showResults();
+    
+    // Force show results page
+    const params = new URLSearchParams(window.location.search);
+    params.set('view', 'results');
+    window.location.search = params.toString();
 }
 
 function showResults() {
@@ -8825,6 +8817,27 @@ document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.RESULT_SUMMARY).innerHTML
             </button>
         </div>
     </div>
+`;
+
+
+    const allAnswered = result.allAnswered;
+    
+    const timeInfoHTML = `
+        <div class="d-flex justify-content-between align-items-center small text-muted">
+            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_DIHABISKAN}:</span>
+            <span><strong>${formatTime(result.timeTaken)}</strong></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center small text-muted">
+            <span>${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_TERSISA}:</span>
+            <span><strong>${isExpired ? '0 menit 0 detik' : formatTime(getRemainingTime())}</strong></span>
+        </div>
+        ${!isExpired && !allAnswered ? `
+        <div class="alert alert-info mt-2 small">
+            <i class="bi bi-info-circle"></i> Masih ada waktu tersisa dan soal yang belum dijawab. 
+            Anda dapat melanjutkan kuis dengan menekan tombol <strong>Edit/Lanjutkan</strong>.
+        </div>
+        ` : ''}
+    `;
 
     const list = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.ANSWER_LIST);
     list.innerHTML = result.answers.map((ans, index) => {
@@ -8869,7 +8882,7 @@ return `
             <p>${ans.question}</p>
             ${question.image ? `
             <div class="question-image-container mt-3 mb-4 text-center">
-                <img src="/pelatihan//assets/images/${question.image}" alt="Gambar soal" class="img-fluid rounded border">
+                <img src="/pelatihan/assets/images/${question.image}" alt="Gambar soal" class="img-fluid rounded border">
             </div>
             ` : ''}
             <ul class="list-group mb-3">${optionsHTML}</ul>
@@ -8950,11 +8963,21 @@ function formatTime(seconds) {
 function calculateTimeTaken() {
     const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
     if (!startTime) return 0;
-    const elapsedSeconds = Math.floor((Date.now() - parseInt(startTime)) / 1000);
+    
+    const endTime = storage.get(QUIZ_CONFIG.KEYS.END_TIME);
+    const now = Date.now();
+    
+    // Gunakan waktu sekarang jika:
+    // 1. Waktu sudah habis, atau
+    // 2. Semua soal telah dijawab (endTime di-set ke waktu sekarang saat finishQuiz)
+    const actualEndTime = isTimeExpired() || (endTime && endTime <= now) ? 
+        Math.min(endTime || now, now) : 
+        now;
+    
+    const elapsedSeconds = Math.floor((actualEndTime - parseInt(startTime)) / 1000);
     const maxDurationSeconds = QUIZ_CONFIG.DURATION / 1000;
     return Math.min(elapsedSeconds, maxDurationSeconds);
 }
-
 
 function formatDateTime(date) {
     return date.toLocaleString('id-ID', {
@@ -9510,7 +9533,7 @@ function createLandingPage() {
       ${currentQuizActive ? `
         <div class="card mb-4 border-warning">
           <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-hourglass-split"></i> Ujian Berjalan</h5>
+              <h5 class="card-title"><i class="bi bi-hourglass-split"></i> Kuis Berjalan</h5>
               <div class="d-flex justify-content-between align-items-center mb-2">
                   <span>Status:</span>
                   <span class="badge bg-warning text-dark">Dalam Progres</span>
@@ -9860,7 +9883,7 @@ function showNotificationsPage() {
 }
 
 function displayActiveQuizzes() {
-  const activeQuizzesList = document.getElementById('activeQuizzesList');
+  const activeQuizzesList = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_TEXT.ACTIVE_QUIZZESS_LIST);
   const activeSessions = getAllActiveSessions();
   document.title = "Notifikasi";
 
@@ -9869,7 +9892,7 @@ function displayActiveQuizzes() {
   if (activeSessions.length === 0) {
     activeQuizzesList.innerHTML = `
       <div class="alert alert-info">
-        <i class="bi bi-info-circle"></i> Tidak ada notifikasi
+        <i class="bi bi-info-circle"></i> ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.NO_NOTIFICATION}
       </div>
     `;
     return;
@@ -9877,7 +9900,7 @@ function displayActiveQuizzes() {
   
   // Add info about number of active quizzes
   const activeCount = activeSessions.length;
-  const infoText = `Anda memiliki ${activeCount} ujian yang berjalan`;
+  const infoText = `Anda memiliki ${activeCount} kuis berjalan`;
   
   activeQuizzesList.innerHTML = `
     <div class="alert alert-info mb-3">
