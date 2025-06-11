@@ -1,6 +1,6 @@
-title               : "Barjas 2025"
-url                 : "https://dapoerela85.github.io/"
-baseurl             : "/barjas/"
+title               : "Pelatihan"
+url                 : "https://dapoerela85.github.io/pelatihan/"
+baseurl             : "/pelatihan/"
 permalink           : pretty
 
 include:
