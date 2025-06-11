@@ -2,3 +2,19 @@ title               : "Barjas 2025"
 url                 : "https://dapoerela85.github.io/"
 baseurl             : "/barjas/"
 permalink           : pretty
+
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "_posts/**"
+      type: posts
+    values:
+      layout: post
+      permalink: /product/:title/
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: page
