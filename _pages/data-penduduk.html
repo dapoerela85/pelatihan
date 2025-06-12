@@ -1,0 +1,250 @@
+---
+layout: null
+permalink: /data-penduduk/
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Population of South Tangerang</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chart-container {
+            width: 900px;
+            height: 500px;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #backButton {
+            display: none;
+            margin: 10px auto;
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #subdistrictTitle {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Population of South Tangerang (2024)</h1>
+    <div id="subdistrictTitle"></div>
+    <button id="backButton" onclick="showMainChart()">← Back to Districts</button>
+    <div class="chart-container">
+        <canvas id="populationChart"></canvas>
+    </div>
+    <div>Sumber: <a href="https://public.tableau.com/app/profile/dinas.kependudukan.pencatatan.sipil.kota.tangerang.selatan/viz/DKBSemester1Tahun2024/Statistik" target="_blank" rel="nofollow">DKB Semester 1 Tahun 2024 by Disdukcapil Kota Tangerang Selatan</a></div>
+    <script>
+        // Data
+        const data = {
+            districts: ['Serpong Utara', 'Serpong', 'Setu', 'Pondok Aren', 'Ciputat', 'Ciputat Timur', 'Pamulang'],
+            districtTotals: [141000, 166717, 93634, 301004, 223313, 171251, 329610],
+            subdistricts: {
+                'Serpong Utara': [
+                    {name: 'Pakualam', value: 16172},
+                    {name: 'Pakujaya', value: 28601},
+                    {name: 'Pakulonan', value: 13121},
+                    {name: 'Pondok Jagung', value: 20669},
+                    {name: 'Pondok Jagung Timur', value: 19742},
+                    {name: 'Jelupang', value: 34230},
+                    {name: 'Lengkong Karya', value: 8465}
+                ],
+                'Serpong': [
+                    {name: 'Lengkong Wetan', value: 10704},
+                    {name: 'Lengkong Gudang', value: 12446},
+                    {name: 'Lengkong Gudang Timur', value: 12620},
+                    {name: 'Cilenggang', value: 11014},
+                    {name: 'Rawabuntu', value: 29340},
+                    {name: 'Rawa Mekar Jaya', value: 19102},
+                    {name: 'Serpong', value: 21809},
+                    {name: 'Ciater', value: 28664},
+                    {name: 'Buaran', value: 21018}
+                ],
+                'Setu': [
+                    {name: 'Kademangan', value: 24844},
+                    {name: 'Muncul', value: 11408},
+                    {name: 'Keranggan', value: 8843},
+                    {name: 'Setu', value: 15308},
+                    {name: 'Babakan', value: 13113},
+                    {name: 'Bakti Jaya', value: 20118}
+                ],
+                'Pondok Aren': [
+                    {name: 'Pondok Kacang Barat', value: 25002},
+                    {name: 'Pondok Kacang Timur', value: 38496},
+                    {name: 'Parigi', value: 22269},
+                    {name: 'Parigi Baru', value: 13047},
+                    {name: 'Pondok Aren', value: 32700},
+                    {name: 'Jurangmangu Barat', value: 38336},
+                    {name: 'Jurangmangu Timur', value: 31328},
+                    {name: 'Pondok Betung', value: 33426},
+                    {name: 'Pondok Karya', value: 27103},
+                    {name: 'Pondok Jaya', value: 11027},
+                    {name: 'Pondok Pucung', value: 28270}
+                ],
+                'Ciputat': [
+                    {name: 'Jombang', value: 44953},
+                    {name: 'Sawah', value: 33768},
+                    {name: 'Sawah Baru', value: 30451},
+                    {name: 'Serua', value: 42581},
+                    {name: 'Serua Indah', value: 22303},
+                    {name: 'Ciputat', value: 25249},
+                    {name: 'Cipayung', value: 27008}
+                ],
+                'Ciputat Timur': [
+                    {name: 'Pondok Ranji', value: 30396},
+                    {name: 'Rengas', value: 24360},
+                    {name: 'Rempoa', value: 26341},
+                    {name: 'Cempaka Putih', value: 26492},
+                    {name: 'Cireundeu', value: 26306},
+                    {name: 'Pisangan', value: 36816}
+                ],
+                'Pamulang': [
+                    {name: 'Kedaung', value: 52273},
+                    {name: 'Bambu Apus', value: 30453},
+                    {name: 'Benda Baru', value: 45207},
+                    {name: 'Pondok Benda', value: 55926},
+                    {name: 'Pamulang Barat', value: 54264},
+                    {name: 'Pamulang Timur', value: 32395},
+                    {name: 'Pondok Cabe Udik', value: 22039},
+                    {name: 'Pondok Cabe Ilir', value: 37053}
+                ]
+            },
+            colors: [
+                '#4E79A7', '#F28E2B', '#E15759', '#76B7B2', 
+                '#59A14F', '#EDC948', '#B07AA1'
+            ]
+        };
+
+        // Chart setup
+        const ctx = document.getElementById('populationChart').getContext('2d');
+        let chart = new Chart(ctx, {});
+        const backButton = document.getElementById('backButton');
+        const subdistrictTitle = document.getElementById('subdistrictTitle');
+
+        // Initialize main chart
+        function showMainChart() {
+            backButton.style.display = 'none';
+            subdistrictTitle.textContent = '';
+            
+            chart.destroy();
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.districts,
+                    datasets: [{
+                        label: 'Population',
+                        data: data.districtTotals,
+                        backgroundColor: data.colors,
+                        borderColor: data.colors.map(color => `${color}FF`),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            showSubdistricts(data.districts[index]);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => `${ctx.raw.toLocaleString('id-ID')} jiwa`
+                            }
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'right',
+                            color: '#333',
+                            formatter: value => value.toLocaleString('id-ID')
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: value => value.toLocaleString('id-ID')
+                            },
+                            title: { text: 'Population', display: true }
+                        },
+                        y: { title: { text: 'Districts', display: true } }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
+        // Show subdistricts for a district
+        function showSubdistricts(districtName) {
+            backButton.style.display = 'block';
+            subdistrictTitle.textContent = `Subdistricts of ${districtName}`;
+            
+            const subdistrictData = data.subdistricts[districtName];
+            const districtColor = data.colors[data.districts.indexOf(districtName)];
+            
+            chart.destroy();
+            chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: subdistrictData.map(sd => sd.name),
+                    datasets: [{
+                        label: 'Population',
+                        data: subdistrictData.map(sd => sd.value),
+                        backgroundColor: subdistrictData.map(() => `${districtColor}80`),
+                        borderColor: subdistrictData.map(() => districtColor),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => `${ctx.raw.toLocaleString('id-ID')} jiwa`
+                            }
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'right',
+                            color: '#333',
+                            formatter: value => value.toLocaleString('id-ID')
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: value => value.toLocaleString('id-ID')
+                            },
+                            title: { text: 'Population', display: true }
+                        },
+                        y: { title: { text: 'Subdistricts', display: true } }
+                    }
+                },
+                plugins: [ChartDataLabels]
+            });
+        }
+
+        // Start with the main chart
+        showMainChart();
+    </script>
+</body>
+</html>
