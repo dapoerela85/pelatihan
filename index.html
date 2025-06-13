@@ -8847,16 +8847,22 @@ function handleUrlParameters() {
     }
 }
 
-function showMainPage() {
+  function showMainPage() {
     const mainPage = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.MAINPAGE);
     const quizList = document.getElementById(COMMON_QUIZ_CONFIG.ELEMENT_IDS.QUIZ_LIST);
     
     quizList.innerHTML = '';
 
+    // Get all active quiz sessions
+    const activeSessions = getActiveQuizSessions();
+
     // Add all quizzes (both available and unavailable)
     for (const [id, config] of Object.entries(QUIZ_CONFIGS)) {
         const quizItem = document.createElement('div');
         quizItem.className = `quiz-item ${config.READY ? '' : 'disabled-quiz'}`;
+        
+        // Check if this quiz is currently active
+        const isActive = activeSessions.some(session => session.quizId === id);
         
         // Check if there are saved results for this quiz
         let recentScoreHTML = '';
@@ -8904,6 +8910,7 @@ function showMainPage() {
                 <div class="quiz-header">
                     <h5 class="quiz-title">${config.QUIZ_TITLE}</h5>
                     ${!config.READY ? '<div class="quiz-unavailable-badge">Tidak tersedia</div>' : ''}
+                    ${isActive ? '<div class="quiz-active-badge">Dalam Progress</div>' : ''}
                 </div>
                 ${recentScoreHTML}
                 <div class="quiz-meta">
@@ -8914,6 +8921,11 @@ function showMainPage() {
                         <span class="badge quiz-duration">
                             <i class="bi bi-clock"></i> ${Math.floor(config.DURATION / (60 * 1000))} Menit
                         </span> 
+                        ${isActive ? `
+                        <span class="badge bg-warning text-dark">
+                            <i class="bi bi-hourglass-split"></i> Aktif
+                        </span>
+                        ` : ''}
                     </div>
                     ${config.READY ? 
                         '<i class="bi bi-chevron-right quiz-arrow"></i>' : 
@@ -10808,7 +10820,7 @@ function displayActiveQuizzes() {
   
   // Add info about number of active quizzes
   const activeCount = activeSessions.length;
-  const infoText = `Anda memiliki ${activeCount} kuis berjalan`;
+  const infoText = `Anda memiliki ${activeCount} ujian berjalan`;
   
   activeQuizzesList.innerHTML = `
     <div class="alert alert-info mb-3">
