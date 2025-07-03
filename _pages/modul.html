@@ -389,37 +389,6 @@ const QUIZ_CONFIGS = {
     }
   },
 
-  'modul1': {
-    STORAGE_KEY: "modul_1",
-    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 1",
-    READY: true,
-    QUIZ_URL: "?id=modul1",
-    HOMEPAGE_URL: "/pelatihan/modul/",
-    SUMBER_SOAL: "",
-    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
-    QUESTION_COUNT: 15,
-    SCORING_RULES: {
-      DEFAULT_SCORE: 1,
-      RANGES: [
-        { from: 1, to: 15, score: 1 }
-      ]
-    },
-    MAX_SCORE: 100,
-    PASSING_SCORE: 80,
-    PASSING_GRADE: "C",
-    KEYS: {
-      START_TIME: "startTime",
-      END_TIME: "endTime",
-      USER_ANSWERS: "userAnswers",
-      RESULTS: "results",
-      CURRENT_QUESTION: "currentQuestion"
-    },
-    TIMER: {
-      INTERVAL: 1000, // 1 detik
-      ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
-    }
-  },
-
   'modul2': {
     STORAGE_KEY: "modul_2",
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 2",
@@ -549,6 +518,37 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 6",
     READY: true,
     QUIZ_URL: "?id=modul6",
+    HOMEPAGE_URL: "/pelatihan/modul/",
+    SUMBER_SOAL: "",
+    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
+    QUESTION_COUNT: 15,
+    SCORING_RULES: {
+      DEFAULT_SCORE: 1,
+      RANGES: [
+        { from: 1, to: 15, score: 1 }
+      ]
+    },
+    MAX_SCORE: 100,
+    PASSING_SCORE: 80,
+    PASSING_GRADE: "C",
+    KEYS: {
+      START_TIME: "startTime",
+      END_TIME: "endTime",
+      USER_ANSWERS: "userAnswers",
+      RESULTS: "results",
+      CURRENT_QUESTION: "currentQuestion"
+    },
+    TIMER: {
+      INTERVAL: 1000, // 1 detik
+      ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
+    }
+  },
+
+  'modul7': {
+    STORAGE_KEY: "modul_7",
+    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 7 (MRP)",
+    READY: true,
+    QUIZ_URL: "?id=modul7",
     HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
@@ -783,8 +783,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 1
-  'modul1': [
+  // Modul 2
+  'modul2': [
     {
       question: "Proses pemilihan penyedia konstruksi pembangunan jalan Melati di Kabupaten ABC senilai Rp500 Juta dilaksanakan oleh...",
       options: [
@@ -937,8 +937,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 2
-  'modul2': [
+  // Modul 3
+  'modul3': [
     {
       question: "Dasar untuk menetapkan batas tertinggi penawaran pada tender pengadaan benih ikan kerapu yaitu...",
       options: [
@@ -1091,8 +1091,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 3
-  'modul3': [
+  // Modul 4
+  'modul4': [
     {
       question: "Pokja Pemilihan akan menetapkan Metode Pemilihan yang digunakan untuk pengadaan kendaraan dengan nilai Rp 850 juta dimana spesifikasi dan volumenya sudah dapat ditentukan secara rinci dan Pelaku Usahanya telah terkualifikasi dalam Sistem Informasi Kinerja Penyedia (SIKAP). Metode Pemilihan yang digunakan yaitu...",
       options: [
@@ -1245,8 +1245,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 4
-  'modul4': [
+  // Modul 5
+  'modul5': [
     {
       question: "Sebelum serah terima pekerjaan rehabilitasi gedung kantor dari penyedia kepada PPK, PPK melakukan pemeriksaan terhadap hasil perkerjaan, yang dapat dibantu oleh...",
       options: [
@@ -1399,8 +1399,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 5
-  'modul5': [
+  // Modul 6
+  'modul6': [
     {
       question: "Berikut ini yang BUKAN merupakan metode pembayaran untuk pekerjaan swakelola kegiatan pengelolaan pembudidayaan ikan pada dinas kelautan dan perikanan provinsi B berdasarkan persentase prestasi kemajuan pekerjaan yaitu...",
       options: [
@@ -1553,8 +1553,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 6
-  'modul6': [
+  // Modul 7
+  'modul7': [
     {
       question: "Rantai suplai panjang dalam manajemen rantai pasok adalah kegiatan yang dimulai dari pengadaan dari penyedia (supplier), dilanjutkan dengan produksi (diinternal organisasi) sampai dengan...",
       options: [
@@ -1705,7 +1705,7 @@ const QUIZ_QUESTIONS = {
       ],
       answer: "B"
     }
-  ],
+  ]
 
 };
 
