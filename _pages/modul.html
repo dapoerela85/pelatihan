@@ -358,11 +358,11 @@ const COMMON_QUIZ_CONFIG = {
 
 // Quiz Config
 const QUIZ_CONFIGS = {
-  'modul1': {
-    STORAGE_KEY: "modul_1",
-    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 1",
+  'pretest': {
+    STORAGE_KEY: "pretest",
+    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Pre Test",
     READY: true,
-    QUIZ_URL: "?id=modul1",
+    QUIZ_URL: "?id=pretest",
     HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
@@ -371,6 +371,37 @@ const QUIZ_CONFIGS = {
       DEFAULT_SCORE: 1,
       RANGES: [
         { from: 1, to: 20, score: 1 }
+      ]
+    },
+    MAX_SCORE: 100,
+    PASSING_SCORE: 80,
+    PASSING_GRADE: "C",
+    KEYS: {
+      START_TIME: "startTime",
+      END_TIME: "endTime",
+      USER_ANSWERS: "userAnswers",
+      RESULTS: "results",
+      CURRENT_QUESTION: "currentQuestion"
+    },
+    TIMER: {
+      INTERVAL: 1000, // 1 detik
+      ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
+    }
+  },
+
+  'modul1': {
+    STORAGE_KEY: "modul_1",
+    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 1",
+    READY: true,
+    QUIZ_URL: "?id=modul1",
+    HOMEPAGE_URL: "/pelatihan/modul/",
+    SUMBER_SOAL: "",
+    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
+    QUESTION_COUNT: 15,
+    SCORING_RULES: {
+      DEFAULT_SCORE: 1,
+      RANGES: [
+        { from: 1, to: 15, score: 1 }
       ]
     },
     MAX_SCORE: 100,
@@ -427,7 +458,7 @@ const QUIZ_CONFIGS = {
     QUIZ_URL: "?id=modul3",
     HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
-    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
+    DURATION: 120 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
     SCORING_RULES: {
       DEFAULT_SCORE: 1,
@@ -458,7 +489,7 @@ const QUIZ_CONFIGS = {
     QUIZ_URL: "?id=modul4",
     HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
-    DURATION: 120 * 60 * 1000,   // 120 minutes in milliseconds
+    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
     SCORING_RULES: {
       DEFAULT_SCORE: 1,
@@ -542,49 +573,14 @@ const QUIZ_CONFIGS = {
       INTERVAL: 1000, // 1 detik
       ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
     }
-  },
-
-  'modul7': {
-    STORAGE_KEY: "modul_7",
-    QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 7",
-    READY: true,
-    QUIZ_URL: "?id=modul7",
-    HOMEPAGE_URL: "/pelatihan/modul/",
-    SUMBER_SOAL: "",
-    DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
-    QUESTION_COUNT: 15,
-    SCORING_RULES: {
-      DEFAULT_SCORE: 1,
-      RANGES: [
-        { from: 1, to: 15, score: 1 }
-      ]
-    },
-    MAX_SCORE: 100,
-    PASSING_SCORE: 80,
-    PASSING_GRADE: "C",
-    KEYS: {
-      START_TIME: "startTime",
-      END_TIME: "endTime",
-      USER_ANSWERS: "userAnswers",
-      RESULTS: "results",
-      CURRENT_QUESTION: "currentQuestion"
-    },
-    TIMER: {
-      INTERVAL: 1000, // 1 detik
-      ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
-    }
   }
 
 };
 
 // Questions
 const QUIZ_QUESTIONS = {
-  // Modul 1
-  'modul1': [
-// Modul 1
-// 20 soal
-// soal no 8 & 14, jawaban salah
-
+  // Pre test
+  'pretest': [
     {
       question: "Segmen manajemen rantai pasok terbagi atas beberapa bagian. Segmen berikut yang BUKAN termasuk segmen manajemen rantai pasok yaitu...",
       options: [
@@ -663,7 +659,7 @@ const QUIZ_QUESTIONS = {
         "C. Kedua belah pihak tidak sepakat untuk melakukan perikatan",
         "D. Suatu sebab dinyatakan haram"
       ],
-      answer: "C"
+      answer: "B"
     },
     {
       question: "Pengadaan kapal dengan metode pemilihan e-purchasing yang akan dibagikan nelayan termasuk jenis pengadaan...",
@@ -723,7 +719,7 @@ const QUIZ_QUESTIONS = {
         "C. Rancangan kontrak",
         "D. Rencana dan jadwal kegiatan"
       ],
-      answer: "D"
+      answer: "B"
     },
     {
       question: "Pengadaan barang/jasa dibawah ini yang TIDAK dapat menyebutkan merk dalam penyusunan spesifikasi teknisnya yaitu...",
@@ -743,7 +739,7 @@ const QUIZ_QUESTIONS = {
         "C. Serah terima pekerjaan",
         "D. Sanksi"
       ],
-      answer: "B"
+      answer: "D"
     },
     {
       question: "Dinas pemuda dan olahraga provinsi XYZ melaksankana pengadaan makan minum untuk kegiatan rapat. kegiatan pengadaan barang/jasa tersebut termasuk jenis kegiatan...",
@@ -787,8 +783,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 2
-  'modul2': [
+  // Modul 1
+  'modul1': [
     {
       question: "Proses pemilihan penyedia konstruksi pembangunan jalan Melati di Kabupaten ABC senilai Rp500 Juta dilaksanakan oleh...",
       options: [
@@ -941,8 +937,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 3
-  'modul3': [
+  // Modul 2
+  'modul2': [
     {
       question: "Dasar untuk menetapkan batas tertinggi penawaran pada tender pengadaan benih ikan kerapu yaitu...",
       options: [
@@ -1095,8 +1091,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 4
-  'modul4': [
+  // Modul 3
+  'modul3': [
     {
       question: "Pokja Pemilihan akan menetapkan Metode Pemilihan yang digunakan untuk pengadaan kendaraan dengan nilai Rp 850 juta dimana spesifikasi dan volumenya sudah dapat ditentukan secara rinci dan Pelaku Usahanya telah terkualifikasi dalam Sistem Informasi Kinerja Penyedia (SIKAP). Metode Pemilihan yang digunakan yaitu...",
       options: [
@@ -1249,8 +1245,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 5
-  'modul5': [
+  // Modul 4
+  'modul4': [
     {
       question: "Sebelum serah terima pekerjaan rehabilitasi gedung kantor dari penyedia kepada PPK, PPK melakukan pemeriksaan terhadap hasil perkerjaan, yang dapat dibantu oleh...",
       options: [
@@ -1403,8 +1399,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 6
-  'modul6': [
+  // Modul 5
+  'modul5': [
     {
       question: "Berikut ini yang BUKAN merupakan metode pembayaran untuk pekerjaan swakelola kegiatan pengelolaan pembudidayaan ikan pada dinas kelautan dan perikanan provinsi B berdasarkan persentase prestasi kemajuan pekerjaan yaitu...",
       options: [
@@ -1557,8 +1553,8 @@ const QUIZ_QUESTIONS = {
     }
   ],
 
-  // Modul 7
-  'modul7': [
+  // Modul 6
+  'modul6': [
     {
       question: "Rantai suplai panjang dalam manajemen rantai pasok adalah kegiatan yang dimulai dari pengadaan dari penyedia (supplier), dilanjutkan dengan produksi (diinternal organisasi) sampai dengan...",
       options: [
