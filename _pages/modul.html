@@ -2841,6 +2841,10 @@ function formatTime(seconds) {
     return parts.join(' ');
 }
 
+function getDurationInMinutes(config) {
+  return config.DURATION / (60 * 1000);
+}
+
 function calculateTimeTaken() {
     const startTime = storage.get(QUIZ_CONFIG.KEYS.START_TIME);
     if (!startTime) return 0;
@@ -3439,7 +3443,7 @@ function createLandingPage() {
           ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.JUMLAH_SOAL}: <span class="badge text-bg-primary rounded-pill">${QUIZ_CONFIG.QUESTION_COUNT}</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_PENGERJAAN}: <span class="badge text-bg-primary rounded-pill">120 Menit</span>
+          ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.WAKTU_PENGERJAAN}: <span class="badge text-bg-primary rounded-pill">${getDurationInMinutes(QUIZ_CONFIG)} Menit</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           ${COMMON_QUIZ_CONFIG.ELEMENT_TEXT.PASSING_GRADE}: <span class="badge text-bg-primary rounded-pill">${QUIZ_CONFIG.PASSING_SCORE} dari ${QUIZ_CONFIG.MAX_SCORE}</span>
