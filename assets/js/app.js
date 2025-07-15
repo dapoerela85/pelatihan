@@ -380,7 +380,7 @@ let isShowingResults = false;
 // Define loadQuestions globally (outside any other function)
 async function loadQuestions(id) {
   try {
-    const response = await fetch(`questions/${id}.json`);
+    const response = await fetch(`/pelatihan/questions/modul/${id}.json`);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     questions = await response.json();
 
