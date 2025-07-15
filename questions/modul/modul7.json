@@ -1,0 +1,152 @@
+[
+  {
+    "question": "Rantai suplai panjang dalam manajemen rantai pasok adalah kegiatan yang dimulai dari pengadaan dari penyedia (supplier), dilanjutkan dengan produksi (diinternal organisasi) sampai dengan...",
+    "options": [
+      "A. Evaluasi penawaran dan penandatanganan kontrak",
+      "B. Pengendalian publik",
+      "C. Pengiriman dan serah terima di masyarakat (customer)",
+      "D. Penyusunan HPS dan penyusunan spesifikasi teknis"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Kegiatan yang bukan termasuk aktivitas pengadaan barang/jasa pemerintag dalam siklus manajemen rantai pasok MAKE yaitu...",
+    "options": [
+      "A. Melakukan proses produksi",
+      "B. Administrasi pergudangan",
+      "C. Menetapkan rencana kinerja tahunan",
+      "D. Pengendalian kualitas mutu"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Contoh kegiatan yang BUKAN merupakan bagian dari rantai pasok produk laptop yaitu...",
+    "options": [
+      "A. Perakitan laptop di pabrik",
+      "B. Pengantaran laptop oleh distributor",
+      "C. Instalasi software setelah pembelian oleh pelanggan",
+      "D. Pengadaan komponen hardware oleh supplier"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Berikut ini yang BUKAN termasuk siklus manajemen rantai paso yaitu...",
+    "options": [
+      "A. Make",
+      "B. Return",
+      "C. Plan",
+      "D. Source"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Dinas kesehatan provisni X menyusun rencana strategis tentang penanganan pencegahan stunting pada anak. Kegiatan ini termasuk penerapan manajemen rantai pasok pada tingkatan manajerial level...",
+    "options": [
+      "A. Pimpinan",
+      "B. Operasional",
+      "C. Taktis",
+      "D. Strategis"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut ini yang merupakan penerapan manajemen rantai pasok pada siklus plan dalam aktivitas PBJP yaitu...",
+    "options": [
+      "A. PPK memilih cara pengadaan barang/jasa berdasarkan hasil identifikasi kebutuhan",
+      "B. PPK melakukan pengendalian kontrak",
+      "C. PPK dan Penyedia melakukan serah terima barang/jasa sesuai kontrak",
+      "D. Pokja Pemilihan melakukan evaluasi penawaran sesuai dokumen pemilihan"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Data penyedia untuk pekerjaan konstruksi pada dinas pekerjaan umum provinsi X telah tersusun beserta hasil penilaian kinerja. Dana ini bermanfaat untuk proses pemilihan selanjutnya. Kegiatan ini termasuk penerapan manajemen rantai pasok pada tingkatan maanjerial level...",
+    "options": [
+      "A. Operasional",
+      "B. Taktis",
+      "C. Strategis",
+      "D. Pimpinan"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pemerintah negara jepang memberikan pinjaman untuk membantu pemerintah indonesia mewujudkan konektivitas antar wilayah. Wujud pembangunan berupa jalan tol dengan pembangunan terowongan di beberapa titik. Kegiatan ini termasuk rantai supply...",
+    "options": [
+      "A. Panjang",
+      "B. Sederhana",
+      "C. Kompleks",
+      "D. Pendek"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Dinas komunikasi dan informasi kabupaten XYZ akan mengadakan perangkat elektronik berupa laptop untuk server LPSE. Kegiatan ini termasuk rantai pasok supply...",
+    "options": [
+      "A. Tidak termasuk kategori rantai supply karena pekerjaan sederhana",
+      "B. Pendek",
+      "C. Panjang",
+      "D. Kompleks"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pokja Pemilihan melaksanakan proses pemilihan penyedia paket pekerjaan pembangunan jembatan sungai rupat senilai Rp 40 Miliar. Kegiatan ini termasuk penerapan manajemen rantai pasok pada tingakatan manajerial level...",
+    "options": [
+      "A. Pimpinan",
+      "B. Taktis",
+      "C. Operasional",
+      "D. Strategis"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Penyedia obat pada katalog elektronik pemerintah melaksanakan proses pengiriman dengan menggunakan modal transportasi darat yang membutuhkan waktu lama dan mengakibatkan beberapa produk kadaluarsa. Karena adanya komplain dari pembeli, pihak manajemen selanjutnya mengubah pola pengiriman dengan pengiriman melalui angkatan udara. Hal ini termasuk aspek manajemen...",
+    "options": [
+      "A. Efficiency (Efisien)",
+      "B. Responsiveness (Responsif)",
+      "C. Agility (Fleksibel dan Adaftif)",
+      "D. Reliability (Andal)"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Proses yang dilaksanakan sebelum siklus SOURCE pada manajemen/pengelolaan rantai pasok yaitu...",
+    "options": [
+      "A. MAKE",
+      "B. SOURCE",
+      "C. DELIVER",
+      "D. PLAN"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Perusahaan produksi laptop melaksanakan survei terhadap konsumen mereka, diperoleh data bahwa laptop yang diproduksi cepat panas dan lambat untuk aplikasi desain. Atas temuan tersebut, manajemen melaksanakan evaluasi dan melakukan perbaikan terhadap komponen laptop untuk meningkatkan kualitas produknya. Berdasarkan supply chain council scor, tindakan yang dilakukan termasuk pada aspek manajemen...",
+    "options": [
+      "A. Agility (Fleksibel dan Adaptif)",
+      "B. Efficiency (Efisien)",
+      "C. Reliability (Andal)",
+      "D. Asset Productivity (Produktivitas Aset)"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pokja pemilihan UKPBJ kota ABC melakukan proses tender pekerjaan pembangunan gedung kantor dengan nilai HPS sebesar Rp 5 Miliar. Pelaksanaan proses tender tersebut merupakan implementasi pada siklus manajemen rantai pasok...",
+    "options": [
+      "A. Make",
+      "B. Source",
+      "C. Plan",
+      "D. Deliver"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Di Kabupaten KLM terjadi bencana alam gempa bumi mengakibatkan kerusakan infrastruktur yang cukup besar. Pemerintah kabupaten KLM selanjutnya melaksanakan perbaikan infrastruktur yang mengalami kerusakan. Kegiatan pengadaan barang/jasa yang dilakukan pemerintah kabupaten tersebut termasuk jenis kegiatan...",
+    "options": [
+      "A. PBJP Rutin",
+      "B. PBJP Tanggap Darurat",
+      "C. PBJP Proyek",
+      "D. PBJP Internasional"
+    ],
+    "answer": "B"
+  }
+]
