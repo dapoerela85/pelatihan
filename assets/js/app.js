@@ -2101,7 +2101,6 @@ ${(() => {
                 minute: '2-digit'
               })}</span>
             </div>
-            <p class="text-muted small p-0 m-0 mt-3">Hasil ini hanya tampil jika Anda pernah mengerjakan soal ini sebelumnya dan hanya Anda yang dapat melihatnya. Tekan tombol Reset dibawah untuk menghapus skor/hasil ini secara permanen dan untuk memulai ulang menjawab soal.</p>
           </div>
         </div>
       ` : ''}
