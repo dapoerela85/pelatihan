@@ -1,0 +1,802 @@
+[
+  {
+    "question": "Badan Perhubungan Provinsi ABC mengadakan meja kerja staf sebanyak 10 (sepuluh) unit sebesar Rp 46.000.000,00. dengan bentuk kontrak adalah kuitansi. Nama pembeli yang akan dicatat dalam kuitansi yaitu...",
+    "options": [
+      "A. Pejabat Pengadaan",
+      "B. Kepala Satker",
+      "C. PA/KPA",
+      "D. PPK"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Pengadaan 4 rim kertas untuk keperluan kantor dengan nilai Rp.43ribu per RIMnya menggunakan bentuk kontrak...",
+    "options": [
+      "A. Kuitansi",
+      "B. Surat Perintah Kerja",
+      "C. Surat Perjanjian",
+      "D. Bukti Pembelian"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Jadwal pelaksanaan Tender/Seleksi diumumkan secara terbuka dan dapat diketahui oleh pelaku usaha yang berminat. Hal tersebut sesuai dengan prinsip pengadaan yaitu...",
+    "options": [
+      "A. Terbuka",
+      "B. Akuntabel",
+      "C. Transparan",
+      "D. Efektif"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pengawasan pengadaan barang/jasa pemerintah secara swakelola dengan mengumpulkan bukti – bukti pelaksanaan kegiatan yang dimulai dari tahapan persiapan, pelaksanaan, pengawasan dan serah terima merupakan aspek pengawasan…",
+    "options": [
+      "A. Administrasi",
+      "B. Keuangan",
+      "C. Teknis",
+      "D. Kepatuhan"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Dalam pelaksanaan kontrak Pengadaan Barang/Jasa Pemerintah antara PPK dengan Penyedia terjadi sengketa atas mutu hasil pekerjaan, maka wilayah hukum yang berlaku dalam pelaksanaan kontrak tersebut yaitu…",
+    "options": [
+      "A. Hukum Pidana",
+      "B. Hukum Persaingan Usaha",
+      "C. Hukum Perdata",
+      "D. Hukum Administrasi Negara"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Kapan PPK dapat melakukan Penilaian Kinerja penyedia ?",
+    "options": [
+      "A. Setelah Rapat Pembuktian (Show Cause Meeting/SCM)",
+      "B. Setelah Reviu Dokumen Persiapan Pengadaan dengan Pokja Pemilihan",
+      "C. Setelah Rapat Persiapan Pelaksanaan Kontrak",
+      "D. Setelah serah terima hasil pekerjaan"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Pelaksanaan tender dengan menggunakan Sistem Pengadaan Secara Elektronik (SPSE) yang berisikan informasi terkait ketentuan tender serta dapat diakses oleh pelaku usaha. Hal ini merupakan implementasi dari prinsip...",
+    "options": [
+      "A. Transparan",
+      "B. Efisien",
+      "C. Efektif",
+      "D. Terbuka"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Para pihak dalam kontrak terdiri dari dua pihak yaitu...",
+    "options": [
+      "A. Pokja Pemilihan dan Pelaksana Swakelola",
+      "B. PPK dan Pengawas Swakelola",
+      "C. PPK dan Penyedia",
+      "D. Pejabat pengadaan dan Penyedia"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pihak yang dapat melakukan pengawasan/pengendalian Kontrak bersama-sama dengan PPK yaitu...",
+    "options": [
+      "A. Pejabat pengadaan",
+      "B. Pokja Pemilihan",
+      "C. APIP",
+      "D. Pihak ketiga yang independen"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Dinas Kesehatan Kabupaten XYZ akan melaksanakan kegiatan pemberian Vaksin bagi Balita dengan bekerja sama dengan Ikatan Dokter Anak Indonesia (IDAI), maka tipe swakelola yang paling tepat yaitu...",
+    "options": [
+      "A. Swakelola Tipe IV",
+      "B. Swakelola Tipe I",
+      "C. Swakelola Tipe II",
+      "D. Swakelola Tipe III"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut ini yang merupakan ketentuan dalam penyusunan dan penetapan HPS yaitu...",
+    "options": [
+      "A. Tidak dapat digunakan sebagai dasar perhitungan kerugian negara",
+      "B. Batas tertinggi penawaran pada pengadaan jasa konsultansi",
+      "C. Memperhitungkan pajak termasuk Pajak Penghasilan [PPh]",
+      "D. Nilai HPS beserta rinciannya bersifat rahasia"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Sebuah organisasi pemerintah memerlukan pemeliharaan komputer dan Air Conditioner (AC) secara periodik untuk menunjang kinerja organisasi secara berkesinambungan. Aktivitas pemeliharaan peralatan tersebut merupakan gambaran karakteristik PBJP dalam kegiatan...",
+    "options": [
+      "A. Pengadaan Langsung",
+      "B. Tanggap darurat",
+      "C. Proyek",
+      "D. Rutin"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut ini yang BUKAN merupakan aspek yang digunakan untuk penilaian kinerja penyedia yaitu...",
+    "options": [
+      "A. Terbuka",
+      "B. Layanan",
+      "C. Biaya",
+      "D. Kualitas"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pengadaan pekerjaan kontruksi senilai Rp. 1,1 Triliun dimana tidak ada pelaku usaha dalam negeri yang mampu dan memenuhi syarat dapat dilakukan melalui Tender Internasional dengan syarat...",
+    "options": [
+      "A. Dokumen pemilihan tender harus menggunakan bahasa inggris",
+      "B. Menggunakan anggaran yang berasal dari Hibah luar negeri",
+      "C. Pembayaran kontrak menggunakan mata uang negara asal pelaku usaha",
+      "D. Kerja sama usaha dalam bentuk konsorsium"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "PPK pada Dinas Kesehatan Kota P akan melaksanakan kegiatan swakelola sosialisasi kesehatan reproduksi bekerjasama dengan salah satu organisasi kemasyarakatan melalui swakelola tipe IV. Kesalahan dalam penetapan tipe swakelola tersebut merupakan risiko yang terjadi pada tahap...",
+    "options": [
+      "A. Pengawasan",
+      "B. Pelaksanaan",
+      "C. Persiapan",
+      "D. Perencanaan"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut ini, paket pengadaan jasa konsultansi yang dialokasikan untuk usaha kecil yaitu…",
+    "options": [
+      "A. Pengembangan Sistem Informasi Kajian Lingkungan Hidup Strategis senilai Rp 185 Juta",
+      "B. Pelaksanaan Survei dan Penilaian Indeks Efektivitas Kinerja senilai Rp 720 Juta",
+      "C. Penyusunan Pedoman Rekonsiliasi Laporan Keuangan senilai Rp 890 Juta",
+      "D. Pengawasan Pembangunan Gedung Arsip senilai Rp 289 Juta"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut ini, data dan informasi yang TIDAK dapat digunakan dalam penyusunan HPS yaitu...",
+    "options": [
+      "A. Informasi biaya yang dipublikasikan oleh K/L/PD",
+      "B. Informasi harga dari toko daring",
+      "C. Dokumen penawaran harga dari penyedia",
+      "D. Perkiraan perhitungan biaya oleh konsultan perencana"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Jika berdasarkan hasil pemeriksaan pekerjaan swakelola dinyatakan telah sesuai, maka hasil pemeriksaan selanjutnya diserahkan kepada PPK untuk dituangkan dalam...",
+    "options": [
+      "A. Berita Acara Hasil Pemilihan",
+      "B. Berita Acara Hasil Pengadaan Langsung",
+      "C. Berita Acara Serah Terima Pekerjaan",
+      "D. Berita Acara Hasil Pemeriksaan Pekerjaan"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Tim Pengelola Kontrak yang membantu PPK untuk menyusun perencanaan pengadaan, menetapkan spesifikasi teknis/KAK, menetapkan rancangan kontrak, menetapkan HPS, dan melakukan pengawasan/pengendalian pelaksanaan kontrak ialah...",
+    "options": [
+      "A. Tim Teknis",
+      "B. Tim/Tenaga Ahli",
+      "C. Tim Pendukung",
+      "D. Tim PPHP"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Ketentuan pelaksanaan Pengadaan barang/jasa pemerintah secara swakelola yang dilaksanakan oleh Organisasi Kemasyarakatan diantaranya...",
+    "options": [
+      "A. Pelaksanaan swakelola dilakukan berdasarkan kontrak antara PPK dengan pengurus Ormas (selaku penerima kuasa)",
+      "B. Penggunaan tenaga ahli maksimum 50% dari jumlah pegawai K/L/PD lain yang terlibat melaksanakan swakelola",
+      "C. Pelaksanaan berdasarkan Kesepakatan kerjasama antara PA/KPA dan pengurus Organisasi Kemasyarakatan",
+      "D. Pelaksanaan swakelola dilakukan berdasarkan kontrak antara PPK dengan pimpinan Kelompok masyarakat"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pokja Pemilihan Kota XYZ akan menentukan Metode Kualifikasi dalam Tender Pekerjaan Pembangunan Saluran Drainase dengan nilai Rp. 1 Miliar dan bersifat tidak kompleks. Metode Kualifikasi yang ditetapkan Pokja Pemilihan untuk Tender tersebut yaitu...",
+    "options": [
+      "A. Prakualifikasi Ambang Batas",
+      "B. Prakualifikasi Sistem Gugur",
+      "C. Pascakualifikasi Sistem Gugur",
+      "D. Pascakualifikasi Ambang Batas"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Institusi yang dapat menjadi pelaksana swakelola tipe I atau dapat juga ditetapkan sebagai pelaksana swakelola tipe II yaitu...",
+    "options": [
+      "A. Organisasi Masyarakat Sipil",
+      "B. Kelompok Masyarakat",
+      "C. Perguruan Tinggi Negeri",
+      "D. Perguruan Tinggi Swasta"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Negosiasi dalam Pengadaan Barang/Jasa Pemerintah TIDAK dapat dilakukan oleh Pokja pemilihan atau Pejabat Pengadaan pada...",
+    "options": [
+      "A. Tender Cepat dengan jumlah peserta yang memasukan penawaran harga hanya 1 (satu) peserta",
+      "B. Seleksi Penyedia Jasa Konsultansi",
+      "C. Tender dengan jumlah peserta yang memasukan penawaran dan lulus evaluasi teknis hanya 1 (satu) peserta",
+      "D. Penunjukan Langsung dan Pengadaan Langsung dengan bentuk Surat Perintah Kerja"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pernyataan berikut ini yang meruakan tujuan dari Pengadaan Barang/Jasa adalah…",
+    "options": [
+      "A. Melaksanakan Pengadaan Barang/Jasa berkelanjutan",
+      "B. Melibatkan penyedia yang memenuhi persyaratan",
+      "C. Meningkatkan Kualitas pengadaan barang/jasa",
+      "D. Meningkatkan peran pelaku usaha nasional"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Pokja Pemilihan Kota ABC akan melakukan Pengadaan Jasa Analisa Dampak Lingkungan suatu kawasan yang akan dibangun Rumah Sakit. Metode Evaluasi Penawaran yang tepat digunakan yaitu...",
+    "options": [
+      "A. Biaya Selama Umur Ekonomis",
+      "B. Sistem Nilai",
+      "C. Kualitas dan Biaya",
+      "D. Harga Terendah"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pokja Pemilihan melakukan reviu dokumen persiapan dan ditemukan bahwa Barang yang dibutuhkan oleh PPK berdasarkan spesifikasi teknis yang telah disusun sudah tidak diproduksi lagi di pasaran. Terhadap hal tersebut, Tindakan apa yang harus dilakukan oleh Pokja Pemilihan ?",
+    "options": [
+      "A. Mengusulkan kepada PPK untuk melakukan perubahan",
+      "B. Mengubah Spesifikasi produk tanpa persetujuan PPK",
+      "C. Memerintahkan PPK untuk melakukan perubahan",
+      "D. Melaporkan kepada PA/KPA"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Strategi pemaketan pada pekerjaan rehabilitasi ruang kelas SMA yang tersebar di beberapa kabupaten dengan total nilai pagu anggaran sebesar Rp 17 miliar yaitu...",
+    "options": [
+      "A. Dilakukan pemecahan menjadi 2 paket untuk memberikan kesempatan pada UMKK",
+      "B. Dilakukan pemecahan paket sesuai dengan lokasi pekerjaan",
+      "C. Dilakukan penggabungan menjadi 1 paket karena sifat dan jenis pengadaannya sama",
+      "D. Dilakukan pemecahan paket menjadi Pengadaan Langsung"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Dinas Pertanian Kabupaten PML melaksanakan kegiatan swakelola penyusunan Naskah Akademik Rancangan Peraturan Daerah tentang Sistem Pertanian Organik dengan Universitas Negeri A. Jika dalam pelaksanaannya terdapat perbedaan antara kondisi lapangan dengan kontrak, maka dilakukan perubahan kontrak antara PPK bersama dengan...",
+    "options": [
+      "A. Ketua Organisasi Kepemudaan",
+      "B. Pimpinan Kelompok Masyarakat",
+      "C. Ketua Tim Persiapan",
+      "D. Ketua Tim Pelaksana"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Bentuk risiko dalam tahapan pengendalian kontrak adalah...",
+    "options": [
+      "A. Pemberian kesempatan karena penyedia tidak mampu menyelesaikan pekerjaan tepat waktu",
+      "B. Adendum kontrak dengan penambahan item pekerjaan lebih dari 10% dari kontrak awal",
+      "C. Pemutusan kontrak sesuai ketentuan",
+      "D. Addendum kontrak paling banyak 10% dari kontrak awal karena terdapat perbedaan kondisi di lapangan"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Tender/Seleksi Paket Pekerjaan yang TIDAK dapat diikuti oleh Pelaku Usaha Asing dalam hal tidak terdapat Pelaku Usaha Nasional yang mampu yaitu...",
+    "options": [
+      "A. Desain Jalan dan Jembatan dengan nilai Rp. 28 Miliar",
+      "B. Desain Stadion Sepakbola dengan nilai Rp. 30 Milyar",
+      "C. Pekerjaan Pembangunan Konstruksi PLTD dengan nilai Rp.1,2 Triliun",
+      "D. Pekerjaan Pembangunan Konstruksi Stadion Olahraga dengan nilai Rp. 600 Miliar"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Dalam hal terjadi deviasi antara realisasi dengan target pelaksanaan Kontrak atau terjadi Kontrak Kritis pada pekerjaan pembangunan jembatan maka para pihak melakukan...",
+    "options": [
+      "A. Rapat Pembuktian Kualifikasi",
+      "B. Rapat Persiapan Pelaksanaan Kontrak (PreConstruction Meeting)",
+      "C. Rapat Pembuktian (Show Cause Meeting)",
+      "D. Rapat Penanganan Darurat"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Dalam menerapkan kebijakan pemberian kesempatan usaha mikro, kecil dan menengah pada pengadaan barang/jasa dilakukan dengan cara yaitu...",
+    "options": [
+      "A. Alokasi anggaran belanja K/L/PD paling seikit 30% untuk belanja Usaha Mikro,Kecil dan Koperasi",
+      "B. Pengadaan pekerjaan konstruksi denan nilai Pagu &gt; Rp.15 M diperuntukkan bagi Usaha Mikro, Kecil dan koperasi",
+      "C. Usaha kecil dilarang mengikuti paket usaha non-kecil",
+      "D. Usaha non-kecil melakukan kerjasama dengan usaha kecil dalam bentuk sebagai mitra, sub-kontrak, atau pemasok"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Para Pihak yang terlibat dalam negosiasi Pengadaan Barang/Jasa pemerintah pada Tender dengan jumlah peserta yang memasukan penawaran dan lulus evaluasi teknis hanya 1 (satu) peserta yaitu...",
+    "options": [
+      "A. Pejabat Pengadaan dan Peserta Pemilihan",
+      "B. Pengguna Anggaran dan Penyedia",
+      "C. Pokja Pemilihan dan Calon Pemenang",
+      "D. Pejabat Pembuat Komitmen dan Penyedia"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pada tahapan perencanaan pengadaan barang/jasa melalui swakelola, bahan/data/informasi yang dibutuhkan adalah...",
+    "options": [
+      "A. SK Tim Penyelenggara swakelola yang terdiri dari tim perencana, persiapan, dan tim pengawas",
+      "B. Rencana dan jadwal kegiatan pelaksanaan swakelola",
+      "C. Data K/L/PD lain yang memiliki kompetensi sesuai pekerjaan, data Organisasi Kemasyarakatan, Data Kelompok Masyarakat",
+      "D. Data hasil penilaian prestasi pekerjaan, bukti-bukti pelaksanaan kegiatan, dan data hasil pengawasan"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "PPK membentuk Tim Pengelola Kontrak dalam rangka mitigasi risiko untuk memastikan kelengkapan administrasi/keuangan pekerjaan sesuai dengan kontrak dengan menetapkan…",
+    "options": [
+      "A. Tim PPHP",
+      "B. Tim/Tenaga Ahli",
+      "C. Tim Pendukung",
+      "D. Tim Teknis"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Salah satu tugas Pejabat Pembuat Komitmen (PPK) adalah melakukan pengendalian kontrak sebagai upaya dalam menjamin mutu pekerjaan sesuai dengan kontrak. Tugas PPK tersebut merupakan gambaran penerapan dari siklus manajemen rantai pasok...",
+    "options": [
+      "A. Source (pencarian pasokan dan pengadaan)",
+      "B. Deliver (pengiriman / distribusi)",
+      "C. Make (pembuatan / produksi)",
+      "D. Plan (perencanaan)"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Salah satu kebijakan PBJP yaitu memberikan kesempatan kepada Usaha Mikro, Usaha Kecil, dan Koperasi. Berikut ini penerapan dari kebijakan tersebut yaitu…",
+    "options": [
+      "A. Tidak saling mempengaruhi baik langsung maupun tidak langsung yang berakibat persaingan usaha tidak sehat",
+      "B. Menghindari dan mencegah pemborosan dan kebocoran keuangan negara",
+      "C. Mengumumkan RUP tepat waktu",
+      "D. Paket pengadaan Barang/Pekerjaan Konstruksi/Jasa Lainnya dengan nilai Pagu Anggaran sampai dengan Rp. 15 M diperuntukan bagi usaha kecil dan atau koperasi, kecuali pekerjaan yang menuntut kompetensi teknis"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "CV. XYZ merupakan penyedia yang mendapatkan pekerjaan Tahun Anggaran sebelumnya dan mampu melaksanakan kewajiban sesuai kontrak serta mendapatkan penilaian kinerja yang memuaskan dari PPK. Maka CV. XYZ termasuk dalam kategori...",
+    "options": [
+      "A. Approved Supplier",
+      "B. Preferred Supplier",
+      "C. Preferred Vendor",
+      "D. Emergency Supplier"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pelaksanaan e-purchasing pada pengadaan pakaian batik tradisional Kabupaten ABC dengan nilai Rp. 500 Juta, dilakukan oleh...",
+    "options": [
+      "A. Pejabat Pengadaan",
+      "B. PA/KPA",
+      "C. PPK",
+      "D. Pokja Pemilihan"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pengadaan barang/jasa di bawah ini yang TIDAK dapat menyebutkan merek dalam penyusunan spesifikasi teknisnya yaitu…",
+    "options": [
+      "A. Penggantian bagian automatic rescue device [ARD] pada lift",
+      "B. Pengadaan server melalui e-purchasing",
+      "C. Pengadaan kendaraan dinas melalui tender",
+      "D. Pengadaan cartridge untuk printer EFG"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Berikut ini yang BUKAN merupakan tujuan dari penyusunan daftar penyedia barang/jasa yaitu...",
+    "options": [
+      "A. Sebagai bahan pembinaan untuk meningkatkan kinerja penyedia barang/jasa",
+      "B. Memperoleh Daftar Risiko dari setiap penyedia barang/jasa",
+      "C. Tersedianya informasi profil pelaku usaha atau penyedia barang/jasa berdasarkan kinerja",
+      "D. Meminimalkan proses pemilihan penyedia barang/jasa"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "PTN X melaksanakan Tender Pengadaan ATK dan Bahan Habis Pakai senilai Rp.2,2 Miliar. Koperasi pegawai PTN X ikut dalam tender tersebut. PPK pada paket tersebutmerupakan Ketua Koperasi PTN X. Hal tersebut TIDAK sesuai dengan Etika pengadaan barang/jasa yaitu...",
+    "options": [
+      "A. Tidak saling mempengaruhi baik langsung maupun tidak langsung yang berakibat persaingan usaha tidak sehat",
+      "B. Menghindari dan mencegah terjadinya pertentangan kepentingan pihak yang terkait, baik secara langsung maupun tidak langsung, yang berakibat persaingan usaha tidak sehat dalam Pengadaan Barang/Jasa",
+      "C. Melaksanakan tugas secara tertib, disertai rasa tanggung jawab untuk mencapai sasaran, kelancaran dan ketepatan tujuan pengadaan Barang/Jasa",
+      "D. Menghindari dan mencegah penyalahgunaan wewenang dan/atau kolusi"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Konsolidasi pengadaan barang/jasa pada tahap persiapan pengadaan dilakukan oleh...",
+    "options": [
+      "A. Kuasa Pengguna Anggaran",
+      "B. Pejabat Pembuat Komitmen",
+      "C. Unit Kerja Pengadaan Barang/Jasa",
+      "D. Pengguna Anggaran"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "PPK Kabupaten ABC melakukan identifkasi kebutuhan pengadaan barang/jasa tahun 2024. Berikut ini aspek yang perlu diperhatikan dalam penyusunan identifikasi kebutuhan barang/jasa adalah...",
+    "options": [
+      "A. Penggunaan PDN dan SNI",
+      "B. Konsolidasi dan jumlah pelaku usaha",
+      "C. Pemanfataan hasil penelitian dan TKDN",
+      "D. Prioritas kebutuhan dan barang/jasa yang telah dimiliki"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "UKPBJ merupakan unit struktrual yang mempunyai tugas dan fungsi sebagai berikut: <br> 1. pengelolaan pengadaan barang/jasa; <br> 2. pengelolaan layanan pengadaan secara elektronik; <br> 3. pembinaan SDM dan kelembagaan PBJ dan <br> 4. pelaksanaan pendampingan, konsultasi dan/atau bimtek PBJ. <br> Tugas dan fungsi UKPBJ pada pernyataan di atas yang dapat digabung adalah...",
+    "options": [
+      "A. 2 dan 3",
+      "B. 1 dan 4",
+      "C. 1 dan 2",
+      "D. 3 dan 4"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "PPK pada Kantor Kesatuan Bangsa dan Politik Kabupaten XYZ menyelenggarakan kegiatan swakelola Sosialisasi Wawasan Kebangsaan dengan Organisasi Kepemudaan yang berbadan hukum. Jika dalam pelaksanaannya terdapat perbedaan antara kondisi lapangan dengan kontrak, maka dilakukan perubahan kontrak antara PPK bersama dengan…",
+    "options": [
+      "A. Ketua Tim Persiapan",
+      "B. Ketua Organisasi Kepemudaan",
+      "C. Pimpinan Kelompok Masyarakat",
+      "D. Ketua Tim Pelaksana"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pokja Pemilihan akan menetapkan Metode Pemilihan yang digunakan untuk pengadaan Kendaraan dengan nilai Rp. 800 Juta dimana spesifikasi dan volumenya sudah dapat ditentukan secara rinci dan Pelaku Usahanya telah terkualifikasi dalam Sistem Informasi Kinerja Penyedia (SIKAP). Metode Pemilihan yang digunakan yaitu...",
+    "options": [
+      "A. Penunjukan Langsung",
+      "B. Seleksi",
+      "C. Tender Cepat",
+      "D. Pengadaan Langsung"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Untuk mengelola data/informasi mengenai riwayat kinerja dan/atau data kualifikasi penyedia barang/jasa, LKPP mengembangkan aplikasi pendukung SPSE yaitu...",
+    "options": [
+      "A. SIRUP",
+      "B. e-katalog",
+      "C. SIKaP",
+      "D. SIUKPBJ"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Uraian spesifikasi mutu dalam pekerjaan penyusunan dokumen perencanaan pembangunan gedung asrama haji dideskripsikan melalui…",
+    "options": [
+      "A. Uraian pekerjaan yang akan dilaksanakan",
+      "B. Kualifikasi tenaga ahli",
+      "C. Waktu pelaksanaan",
+      "D. Layanan purna jual"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Manakah pernyataan yang merupakan risiko dalam tahapan pemilihan penyedia…",
+    "options": [
+      "A. Kesalahan dalam merumuskan isi kontrak",
+      "B. Hasil negosiasi tidak optimal",
+      "C. Barang/jasa tidak sesuai kebutuhan",
+      "D. Penetapan cara pengadaan barang/jasa tidak tepat"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Tim Pelaksana swakelola dari Universitas Negeri A telah selesai melaksanakan pekerjaan dan melaporkan kepada PPK untuk dilakukan pemeriksaan hasil pekerjaan. Pihak yang melakukan pemeriksaan hasil pekerjaan yaitu…",
+    "options": [
+      "A. Tim Pengawas",
+      "B. Tim Persiapan",
+      "C. Pejabat Pembuat Komitmen",
+      "D. Pengguna Anggaran"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pengadaan Barang/Jasa Pemerintah adalah kegiatan Pengadaan Barang/Jasa oleh Kementerian/ Lembaga/ Perangkat Daerah yang dibiayai oleh APBN/APBD yang prosesnya sejak...",
+    "options": [
+      "A. Identifikasi kebutuhan sampai dengan pelaksanaan kontrak",
+      "B. Penyusunan anggaran sampai dengan serah terima hasil pekerjaan",
+      "C. Identifikasi kebutuhan sampai dengan pemeriksaan hasil pekerjaan",
+      "D. Identifikasi kebutuhan sampai dengan serah terima hasil pekerjaan"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Salah satu tahapan perencanaan Pengadaan Barang/Jasa Pemerintah adalah identifikasi kebutuhan. Proses tersebut merupakan gambaran aktivitas dalam segmen rantai pasok...",
+    "options": [
+      "A. Hulu",
+      "B. Eksternal",
+      "C. Hilir",
+      "D. Internal"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Dinas Lingkungan Hidup Kabupaten X akan melakukan pembelian bibit tanaman Mahoni dengan nilai total Rp162 juta melalui e-katalog lokal. Pelaku pengadaan barang/jasa yang berwenang melaksanakan e-purchasing tersebut adalah...",
+    "options": [
+      "A. PA",
+      "B. PP",
+      "C. PPK",
+      "D.  Pokja Pemilihan"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pelaku pengadaan barang/jasa pemerintah yang berwenang menjawab sanggah banding yaitu...",
+    "options": [
+      "A. Pengguna Anggaran (PA)",
+      "B. Kuasa Pengguna Anggaran (KPA)",
+      "C. Kelompok Kerja Pemilihan",
+      "D. Pejabat Pembuat Komitmen (PPK)"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Berikut ini merupakan upaya pemerintah dalam memberikan peran UMKK dalam PBJP yaitu…",
+    "options": [
+      "A. Memperbanyak paket pengadaan untuk usaha non kecil",
+      "B. Produk UMKK dimasukkan dalam katalog elektronik lokal",
+      "C. Memperuntukkan paket pengadaan Pekerjaan Konstruksi yang tidak menuntut kemampuan teknis dengan nilai Pagu Rp. 10 Miliar bagi UMKK",
+      "D. Mewajibkan pekerjaan konstruksi sederhana yang dilakukan UMKK memiliki peralatan milik sendiri"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Tidak saling mempengaruhi baik langsung maupun tidak langsung yang berakibat persaingan usaha tidak sehat merupakan salah satu etika dalam Pengadaan Barang/Jasa Pemerintah. Berikut ini penerapan yang sesuai dengan etika tersebut yaitu…",
+    "options": [
+      "A. PA/KPA melakukan intervensi dalam proses pemilihan penyedia",
+      "B. PPK memberikan rincian HPS kepada peserta tender sebelum pembukaan penawaran",
+      "C. Pokja pemilihan menerima uang dari salah satu peserta tender untuk memenangkan peserta tender tersebut",
+      "D. PPK dalam menyusun spesifikasi teknis tidak mengarah pada penyedia tertentu, kecuali untuk pengadaan yang diperbolehkan menyebut merk"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Prinsip pengadaan yang harus diperhatikan dalam identifikasi kebutuhan barang/jasa yaitu…",
+    "options": [
+      "A. Transparan dan efektif",
+      "B. Efisien dan efektif",
+      "C. Transparan dan terbuka",
+      "D. Bersaing dan adil"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pembangunan Gedung Sekolah termasuk dalam jenis pengadaan…",
+    "options": [
+      "A. Jasa Lainnya",
+      "B. Pekerjaan Konstruksi",
+      "C. Barang",
+      "D.  Jasa Konsultansi"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Berikut ini yang perlu diperhatikan dalam melakukan Reviu spesifikasi teknis/KAK yaitu ketentuan mengenai...",
+    "options": [
+      "A. Penyesuaian Harga",
+      "B. Denda Keterlambatan",
+      "C. Pemberian Uang Muka",
+      "D. Tingkat Komponen Dalam Negeri (TKDN)"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Apabila dalam pemeriksaan hasil pekerjaan tidak sesuai dengan ketentuan yang tercantum dalam Kontrak dan/atau cacat hasil pekerjaan, maka...",
+    "options": [
+      "A. PPK melaporkan kepada Pengguna Anggaran bahwa hasil pekerjaan yang diserahterimakan tidak sesuai dengan yang tercantum di dalam Kontrak",
+      "B. PPK memerintahkan Penyedia untuk memperbaiki dan/atau melengkapi kekurangan pekerjaan sebelum melakukan serah terima hasil pekerjaan",
+      "C. PPK memerintahkan Penyedia untuk memperbaiki dan/atau melengkapi kekurangan pekerjaan setelah serah terima hasil pekerjaan",
+      "D. PPK melaporkan kepada Tim Teknis atau Tim Ahli bahwa hasil pekerjaan yang diserahterimakan tidak sesuai dengan yang tercantum di dalam Kontrak"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Berikut ini yang termasuk dalam sumber daya pendukung ekosistem Pengadaan Barang/Jasa Pemerintah yaitu…",
+    "options": [
+      "A. Pemberi Keterangan Ahli (PKA)",
+      "B. Pengelola PBJ",
+      "C. Kepala Daerah",
+      "D. APIP"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Dalam pembangunan RSU perlu memperhatikan pembuangan limbah yang dihasilkan dari RSU agar tidak mencemari lingkungan sekitar. Hal tersebut merupakan gambaran implementasi dari tujuan pengadaan…",
+    "options": [
+      "A. Meningkatkan penggunaan produk dalam negeri",
+      "B. Meningkatkan pengadaan berkelanjutan",
+      "C. Meningkatkan keikutsertaan industri kreatif",
+      "D. Meningkatkan peran serta UMKK"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Tindak lanjut yang dilakukan oleh Peserta Pemilihan jika tidak setuju dengan jawaban Sanggah dari Pokja Pemilihan pada pekerjaan Rehabilitasi Gedung Olahraga XYZ senilai Rp. 5 Miliar?",
+    "options": [
+      "A. Menyampaikan Pengaduan kepada Kepala UKPBJ",
+      "B. Menyampaikan sanggah banding kepada KPA",
+      "C. Menyampaikan keberatan kepada PPK",
+      "D. Menyampaikan sanggah banding kepada Pokja Pemilihan"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Strategi pengadaan yang dapat dikembangkan dari kebijakan memberikan kesempatan kepada Usaha Mikro, Kecil dan Menengah yaitu…",
+    "options": [
+      "A. Mengalokasikan paling sedikit 40% dari nilai anggaran belanja barang/jasa untuk produk usaha kecil",
+      "B. Mempertimbangkan nilai TKDN dan nilai BMP",
+      "C. Pemanfaatan katalog elektronik, toko daring dan pemilihan penyedia",
+      "D. Meningkatkan kesadaran potensi industri kreatif"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pembentukan UKPBJ Kota XYZ secara struktural dengan nomenklatur berdasarkan kebutuhan dan sesuai ketentuan peraturan perundang-undangan dilakukan oleh…",
+    "options": [
+      "A. Pejabat Pembuat Komitmen",
+      "B. Kepala Daerah",
+      "C. Pengguna Anggaran",
+      "D.  Kuasa Pengguna Anggaran"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Dinas Kebudayaan Kabupaten XYZ melaksanakan swakelola penyusunan buku profil budaya bekerja sama dengan Universitas Negeri A. Selanjutnya Rektor Universitas Negeri A menetapkan Lembaga Penelitian dan Pengabdian kepada Masyarakat [LPPM] sebagai pelaksana swakelola. Penetapan anggota tim pelaksana pada swakelola tersebut, dilakukan oleh…",
+    "options": [
+      "A. Kepala Dinas Kebudayaan Kabupaten XYZ sebagai PA",
+      "B. Pejabat Pembuat Komitmen Dinas Kebudayaan Kabupaten XYZ",
+      "C. Rektor Universitas Negeri A",
+      "D. Ketua LPPM Universitas Negeri A"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "PPK pada kementerian X melakukan identifikasi kebutuhan pengadaan barang/jasa tahun 2024. Berikut ini BUKAN aspek yang perlu diperhatikan dalam melakukan identifikasi kebutuhan barang adalah...",
+    "options": [
+      "A. Layanan purna jual",
+      "B. Jadwal kebutuhan",
+      "C. TKDN",
+      "D. Jumlah produsen dan/atau tenaga ahli"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Dalam proses evaluasi penawaran, Pokja Pemilihan menemukan salah satu peserta menyampaikan dokumen palsu di dalam dokumen penawarannya. Sanksi yang diberikan kepada peserta pemilihan tersebut yaitu...",
+    "options": [
+      "A. Dikenakan denda keterlambatan",
+      "B. Daftar hitam selama 1 (satu) tahun",
+      "C. Pencairan jaminan pelaksanaan",
+      "D. Digugurkan dalam pemilihan"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Tahapan Awal yang dilakukan pada Pekerjaan Pembangunan Dinding Penahan Tanah yang harus segera dilaksanakan dalam Penanganan Keadaan Darurat akibat Bencana Tanah Longsor di Provinsi XYZ yaitu...",
+    "options": [
+      "A. Menerbitkan Surat Penunjukan Penyedia Barang/Jasa (SPPBJ)",
+      "B. Melakukan Tender",
+      "C. Melakukan Pemeriksaan Lokasi Pekerjaan",
+      "D. Melakukan Penunjukan Langsung"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu akan melaksanakan Penyusunan Strategi Sasaran Promosi Invetasi dengan anggaran Rp 48 juta. Jenis pengadaan, bentuk kontrak dan jenis kontrak yang paling sesuai untuk pekerjaan tersebut adalah...",
+    "options": [
+      "A. Jasa Konsultan, Kuitansi, harga satuan",
+      "B. Jasa Lainnya, Kuitansi, Lumsum",
+      "C. Jasa Lainnya, SPK, harga satuan",
+      "D. Jasa Konsultan, SPK, Lumsum"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "BPSDM Provinsi XYZ bermaksud melakukan pengadaan Laptop. Adapun spesifikasi yang dibutuhkan adalah sebagai berikut: <br> 1. Layar 14 Inci. 1920 x 1200 pixels, <br> 2. Jumlah 5 unit, <br> 3. Prosesor Intel® Core™ i5-1235U, <br> 4. Memory 8GB/16GB DDR4 3200MHz, <br> 5. Dibutuhkan 5 Agustus 2023. Spesifikasi di atas yang merupakan spesifikasi mutu adalah...",
+    "options": [
+      "A. 1,2,3",
+      "B. 1,3,4",
+      "C. 1,2,4",
+      "D. 1,4,5"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pemerintah Kota Y akan melaksanakan pembangunan Gedung Kantor Pemerintah 3 lantai seluas 1.000 meter persegi dengan anggaran Rp 12 Miliar. Jenis Kontrak yang paling tepat digunakan untuk Konsultan Perencana, Kontraktor dan Konsultan Pengawas pada pekerjaan tersebut adalah...",
+    "options": [
+      "A. Waktu Penugasan, Lumsum, Waktu Penugasan",
+      "B. Lumsum, Gabungan Lumsum Harga Satuan, Waktu Penugasan",
+      "C. Lumsum, Harga Satuan dan Lumsum",
+      "D.  Lumsum, Harga Satuan, Waktu Penugasan"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pemerintah Kabupaten DEF akan melakukan renovasi gedung kantor dengan nilai Rp. 345 juta Rupiah. Metode Pemilihan, Metode Kualifikasi dan metode Evaluasi Penawaran yang tepat untuk pengadaan tersebut adalah...",
+    "options": [
+      "A. Tender, Prakualifikasi dan Sistem Nilai",
+      "B. Penunjukan Langsung, Prakualifikasi dan Sistem Nilai",
+      "C. Tender, Pascakualifikasi dan Harga Terendah",
+      "D. Pengadaan Langsung, Pascakualifikasi, dan Harga Terendah"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pada pengadaan Jasa Konsultansi Perencanaan Pembangunan Gedung Kantor Pemerintah Kabupaten ABC senilai Rp 800juta, terdapat beberapa komponen pembiayaan sebagai berikut: <br> 1. Remunerasi tenaga ahli sipil, <br> 2. Gaji Tenaga ahli Mechanical Engineering, <br> 3. Biaya Pengumpulan data, <br> 4. Remunerasi team leader, <br> 5. Biaya survei lapangan, <br> 6. Tunjangan Harian. <br> Dari komponen pembiayaan diatas, yang termasuk komponen biaya langsung personel adalah...",
+    "options": [
+      "A. 2, 3, 4",
+      "B. 2, 4, 6",
+      "C. 1, 3, 5",
+      "D. 1, 2, 4"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Pemeritah Kota KLM akan melaksanakan pengadaan jasa konsultansi analisa dampak lingkungan dengan nilai sebesar Rp. 80 juta rupiah. Metode Pemilihan, Metode Evaluasi penawaran dan Metode penyampaian penawaran yang tepat untuk pengadaan tersebut adalah...",
+    "options": [
+      "A. Seleksi, Kualitas dan satu file",
+      "B. Penunjukan Langsung, Kualitas dan satu file",
+      "C. Pengadaan Langsung, Kualitas dan Biaya, dua file",
+      "D. Pengadaan Langsung, Kualitas dan Biaya, satu file"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Berikut adalah data informasi yang dapat digunakan dalam penyusunan Harga Perkiraan Sendiri: <br> 1. Harga Pasar Setempat, <br> 2. Informasi harga biaya publikasi oleh asosiasi, <br> 3. Perkiraan biaya yang dilakukan konsultan perencana, <br> 4. Informasi harga dari Toko Daring, <br> 5. Harga kontrak sejenis. <br> Sumber data yang dapat digunakan dalam penyusunan HPS untuk pengadaan Laptop di Dinas Pertanian Kabupaten XYZ adalah...",
+    "options": [
+      "A. 1,4,5",
+      "B. 1,3,5",
+      "C. 1,2,3",
+      "D. 2,4,5"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Pemerintah Kabupaten LUW akan melakukan pekerjaan renovasi dan pemugaran gedung kantor 3 lantai dengan nilai kontrak Rp 900 juta rupiah dengan lingkup pekerjaan yang pasti. Bentuk Kontrak, Jenis Kontrak dan jenis jaminan yang paling tepat saat PPK akan melaksanakan penandatanganan kontrak adalah...",
+    "options": [
+      "A. Kuitansi, Putar Kunci, Jaminan Penawaran",
+      "B. Surat Perintah Kerja, Harga Satuan, Jaminan Pemeliharaan",
+      "C. Surat Perjanjian, Lumsum, Jaminan Pelaksanaan",
+      "D. Surat Pesanan, Lumsum, Jaminan Penawaran"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pada pengadaan perencanaan pembangunan saluran irigasi di kabupaten ABD untuk wilayah seluas 9 hektar dan anggaran sebesar Rp.900 juta rupiah yang akan dlakukan oleh Badan Usaha. Metode Pemilihan, kualifikasi dan pemasukan penawaran yang tepat untuk pengadaan tersebut adalah...",
+    "options": [
+      "A. Tender, Pascakualifikasi dan 2 file",
+      "B. Tender, Prakualifikasi dan 2 file",
+      "C. Seleksi, Prakualifikasi dan 2 file",
+      "D. Seleksi, Prakualifikasi dan satu file"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Pengadaan Bulldozer dengan masa manfaat selama 10 tahun dilakukan oleh Kementerian PQX dengan anggaran sebesar Rp. 4,3 Milliar. Metode pemilihan penyedia, kualifikasi dan evaluasi penawaran yang tepat untuk pengadaan tersebut adalah...",
+    "options": [
+      "A. Tender, Prakualifikasi, penilaian biaya selama umur ekonomis",
+      "B. Penunjukan langsung, pascakualifikasi, harga terendah",
+      "C. Tender, Pascakualifikasi. penilaian biaya selama umur ekonomi",
+      "D. Pengadaan Langsung, Pascakualifikasi, sistem nilai"
+    ],
+    "answer": "C"
+  }
+]
