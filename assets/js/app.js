@@ -1,5 +1,5 @@
 const APP_URLS = {
-    HOME: 'modul.html',
+    HOME: '/pelatihan/modul/',
     NOTIFICATION: '?view=notifications',
     SETTINGS: '?view=settings',
     HELP: '?view=help'
@@ -93,7 +93,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Pre Test",
     READY: true,
     QUIZ_URL: "?id=pretest",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 20,
@@ -124,7 +124,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 2",
     READY: true,
     QUIZ_URL: "?id=modul2",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -155,7 +155,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 3",
     READY: true,
     QUIZ_URL: "?id=modul3",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -186,7 +186,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 4",
     READY: true,
     QUIZ_URL: "?id=modul4",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -217,7 +217,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 5",
     READY: true,
     QUIZ_URL: "?id=modul5",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -248,7 +248,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 6",
     READY: true,
     QUIZ_URL: "?id=modul6",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -279,7 +279,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1 Modul 1 (MRP)",
     READY: true,
     QUIZ_URL: "?id=modul7",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 20 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 15,
@@ -310,7 +310,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out Pelatihan Kompetensi FBJ Level 1",
     READY: true,
     QUIZ_URL: "?id=tryout",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 120 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 100,
@@ -341,7 +341,7 @@ const QUIZ_CONFIGS = {
     QUIZ_TITLE: "Try Out 7 Level 1 Perpres 46/2025",
     READY: true,
     QUIZ_URL: "?id=tryout7",
-    HOMEPAGE_URL: "modul.html",
+    HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
     DURATION: 120 * 60 * 1000,   // 120 minutes in milliseconds
     QUESTION_COUNT: 100,
@@ -566,7 +566,7 @@ function showMainPage() {
         
         if (config.READY) {
             const quizLink = document.createElement('a');
-            quizLink.href = `modul.html?id=${id}`;
+            quizLink.href = `/pelatihan/modul/?id=${id}`;
             quizLink.className = 'quiz-link';
             quizLink.innerHTML = quizItem.innerHTML;
             quizList.appendChild(quizLink);
@@ -628,7 +628,7 @@ function showDisabledQuizMessage() {
             <div class="card-body">
                 <h2>Kuis Tidak Tersedia</h2>
                 <p class="lead">Kuis ini belum tersedia. Silakan pilih kuis lain yang tersedia.</p>
-                <a href="modul.html" class="btn btn-primary mt-3">
+                <a href="/pelatihan/modul/" class="btn btn-primary mt-3">
                     <i class="bi bi-house-door"></i> Kembali ke Beranda
                 </a>
             </div>
@@ -676,7 +676,7 @@ function showHelpPage() {
     const faqItems = [
         {
             question: "Bagaimana cara memulai ujian?",
-            answer: "Dihalaman <a href='modul.html'>utama/beranda</a>, pilih ujian yang ingin dikerjakan dan akan dialihkan kehalaman ujian, Klik tombol 'Mulai Sekarang' untuk memulai ujian."
+            answer: "Dihalaman <a href='/pelatihan/modul/'>utama/beranda</a>, pilih ujian yang ingin dikerjakan dan akan dialihkan kehalaman ujian, Klik tombol 'Mulai Sekarang' untuk memulai ujian."
         },
         {
             question: "Berapa lama waktu yang diberikan untuk mengerjakan ujian?",
@@ -1618,7 +1618,7 @@ function getAllActiveSessions() {
                         endTime: parseInt(endTime),
                         currentQuestion: parseInt(localStorage.getItem(`${config.STORAGE_KEY}_${config.KEYS.CURRENT_QUESTION}`)) || 0,
                         quizTitle: config.QUIZ_TITLE,
-                        quizUrl: `modul.html?id=${quizId}`
+                        quizUrl: `/pelatihan/modul/?id=${quizId}`
                     });
                 }
             }
@@ -1878,7 +1878,7 @@ function setupClearDataModal(modalTitle, modalBody, confirmBtn) {
         
         // Redirect to home after a delay
         setTimeout(() => {
-            window.location.href = 'modul.html';
+            window.location.href = '/pelatihan/modul/';
         }, 1500);
         
         universalModal.hide();
@@ -2313,7 +2313,7 @@ function getActiveQuizSessions() {
                         endTime: parseInt(endTime),
                         currentQuestion: parseInt(localStorage.getItem(`${config.STORAGE_KEY}_${config.KEYS.CURRENT_QUESTION}`)) || 0,
                         quizTitle: config.QUIZ_TITLE,
-                        quizUrl: `modul.html?id=${quizId}`
+                        quizUrl: `/pelatihan/modul/?id=${quizId}`
                     });
                 }
             }
@@ -2399,7 +2399,7 @@ function setupNotificationEventListeners() {
     btn.addEventListener('click', function() {
       const quizId = this.dataset.quizId;
       const questionNum = this.dataset.question;
-      window.location.href = `modul.html?id=${quizId}&soal=${questionNum}`;
+      window.location.href = `/pelatihan/modul/?id=${quizId}&soal=${questionNum}`;
     });
   });
   
@@ -2537,7 +2537,7 @@ document.addEventListener('click', function(e) {
         const questionNum = btn.getAttribute('data-question');
         
         // Force reload with the correct URL
-        window.location.href = `modul.html?id=${quizId}&soal=${questionNum}`;
+        window.location.href = `/pelatihan/modul/?id=${quizId}&soal=${questionNum}`;
     }
 });
 document.addEventListener('DOMContentLoaded', function() {
