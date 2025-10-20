@@ -397,8 +397,39 @@ const QUIZ_CONFIGS = {
       INTERVAL: 1000, // 1 detik
       ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
     }
-  }
+  },
 
+  'buku2': {
+    STORAGE_KEY: "modul_buku2",
+    QUIZ_TITLE: "Try Out Level 1 Buku 2",
+    READY: false,
+    QUIZ_URL: "?id=buku2",
+    HOMEPAGE_URL: "/pelatihan/modul/",
+    SUMBER_SOAL: "",
+    DURATION: 120 * 60 * 1000,   // 120 minutes in milliseconds
+    QUESTION_COUNT: 100,
+    SCORING_RULES: {
+      DEFAULT_SCORE: 1,
+      RANGES: [
+        { from: 1, to: 100, score: 1 }
+      ]
+    },
+    MAX_SCORE: 100,
+    PASSING_SCORE: 65,
+    PASSING_GRADE: "C",
+    KEYS: {
+      START_TIME: "startTime",
+      END_TIME: "endTime",
+      USER_ANSWERS: "userAnswers",
+      RESULTS: "results",
+      CURRENT_QUESTION: "currentQuestion"
+    },
+    TIMER: {
+      INTERVAL: 1000, // 1 detik
+      ALERT_THRESHOLD: 5 * 60 * 1000 // 5 menit sebelum habis
+    }
+  }
+        
 };
 
 // Variabel global
@@ -2618,5 +2649,6 @@ window.addEventListener('appinstalled', () => {
     // Optionally, send analytics event to indicate successful install
     console.log('PWA was installed');
 });
+
 
 
