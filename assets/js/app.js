@@ -402,7 +402,7 @@ const QUIZ_CONFIGS = {
   'buku2': {
     STORAGE_KEY: "modul_buku2",
     QUIZ_TITLE: "Try Out Level 1 Buku 2",
-    READY: false,
+    READY: true,
     QUIZ_URL: "?id=buku2",
     HOMEPAGE_URL: "/pelatihan/modul/",
     SUMBER_SOAL: "",
@@ -2649,6 +2649,7 @@ window.addEventListener('appinstalled', () => {
     // Optionally, send analytics event to indicate successful install
     console.log('PWA was installed');
 });
+
 
 
 
