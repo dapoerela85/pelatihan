@@ -368,7 +368,7 @@ const QUIZ_CONFIGS = {
   },
 
 
-  'modul_buku1': {
+  'buku1': {
     STORAGE_KEY: "modul_buku1",
     QUIZ_TITLE: "Try Out Level 1 Buku 1",
     READY: true,
@@ -2618,4 +2618,5 @@ window.addEventListener('appinstalled', () => {
     // Optionally, send analytics event to indicate successful install
     console.log('PWA was installed');
 });
+
 
